@@ -1,4 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+footer{
+  height: 100px;
+  background-color: #93C193;
+  font-size: 18px;
+  padding: 3%;
+  color: white;
+  font-family: "Figtree", sans-serif; /* This is imported from Google Fonts */
+}
+footer .left_anchor{ /* Furthest left anchor has 10% margin left to line up with main content */
+  margin-left: 8%;
+}
+footer .right{ /* Furthest right anchor has 10% margin left to line up */
+  margin-right: 8%;
+}
+footer a{
+  color: #f2f2f2;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Figtree", sans-serif;
+}
+footer p{
+  font-size: 18px;
+  margin-left: 8%;
+}
+footer a:hover {
+  background-color: #ddd;
+  color: black;
+}
+footer a.active {
+  background-color: #04AA6D;
+  color: white;
+}
 .topnav {
   overflow: hidden;
   background-color: #93C193;
