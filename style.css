@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.main_content{
+    width: 80%;
+    text-align: justify;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #C87620;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
 h1,h4{
     font-family: Archivo Black;
 }
