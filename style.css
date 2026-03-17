@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+small{
+    display: block;
+    margin-top: 15px;
+}
 footer{
   height: 100px;
   background-color: #93C193;
