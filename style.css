@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+h1,h4{
+    font-family: Archivo Black;
+}
+p{
+    font: 200 16px Inter;
+}
+.parallax {
+  background-image: url("images/lifting_weight.jpg"); /* The image used */
+  min-height: 500px; /* Set a specific height */
+  background-attachment: fixed; /* Create the parallax scrolling effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
