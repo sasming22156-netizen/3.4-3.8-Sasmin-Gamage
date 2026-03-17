@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    background-color: #453724;
+}
+.topnav img{/*styling for the logo on the left of navbar*/
+    float: left;
+    height: 60px;
+    width: auto;
+    padding: 1px 0px;
+    margin-left: 10%;
+}
 .main_content{
     width: 80%;
     text-align: justify;
@@ -6,7 +16,7 @@
     overflow: hidden;
     margin: 20px auto;
     padding: 20px;
-    background-color: #C87620;
+    background-color: #F7DCA1;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
@@ -15,6 +25,7 @@ h1,h4{
 }
 p{
     font: 200 16px Inter;
+    color: #5E121F;
 }
 .parallax {
   background-image: url("images/lifting_weight.jpg"); /* The image used */
@@ -23,4 +34,12 @@ p{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width:768px){
+    .topnav a:first-of-type{
+        margin-top: 60px;
+    }
+    .main_content{
+        width: 95%;
+    }
 }
