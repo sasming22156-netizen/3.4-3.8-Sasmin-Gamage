@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .nav-links{
   margin-left: auto;
+  margin-right: 8%;
 }
 small{
     display: block;
@@ -40,8 +41,12 @@ footer a:hover {
   color: black;
 }
 footer a.active {
-  background-color: #04AA6D;
+  background-color: #284868;
   color: white;
+}
+footer a.active:hover{
+  background-color: #ddd;
+  color: black;
 }
 .topnav {
   display: flex;
@@ -64,8 +69,12 @@ footer a.active {
   color: black;
 }
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #284868;
   color: white;
+}
+.topnav a.active:hover{
+  background-color: #ddd;
+  color: black;
 }
 .topnav .icon {
   display: none;
