@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declares the document type and verison of HTML (HTML5) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,40 @@
         <i class="fa fa-bars"></i>
     </a>
 </div>
-<body>  
+<body>
+    <div class="main_content">
+        <form> <!-- Seperate content container for the form to improve clarity -->
+        <h1>Contact Us:</h1>
+        <p>Whether you have a question, want to buy from us, or just want to say hi, we’re always here for you. Reach out and let us know how we can make your experience even better. Please enter your name, address, email address, and other relevant information.</p>
+			<!-- Wraps all input fields and enable data submission -->
+			<div>
+				<label for="firstname">First Name</label><input id="firstname" name="firstname" required="" type="text"> <!-- Required tag prevents empty submissions -->
+			</div>
+			<div>
+				<label for="firstname">Last Name</label> <input id="lastname" name="lastname" required="" type="text"> <!-- Required tag prevents empty submissions -->
+			</div>
+			<div>
+				<label for="email">Email</label> <input id="email" name="email" required="" type="email"> <!-- Required tag prevents empty submissions -->
+			</div>
+			<div>
+				<label for="phone">Phone</label> <input id="phone" name="phone" required="" type="text"> <!-- Required tag prevents empty submissions -->
+			</div>
+			<div>
+				<label for="dob">Date of Birth (MM/DD/YYYY)</label> <input id="dob" name="dob" required="" type="text"> <!-- Required tag prevents empty submissions -->
+			</div>
+			<div>
+				<label for="message">Comments</label> 
+				<textarea id="message" name="message" rows="5"></textarea> <!-- Rows controls height -->
+			</div>
+			<div>
+				<input id="agree" name="agree" required="" type="checkbox"> <!-- Required tag prevents empty submissions -->
+				 <label for="agree">I agree to to terms and service</label>
+			</div>
+			<div>
+				<input onclick="myFunction()" type="submit" value="Submit"> <!-- This runs a JavaScript function called myFunction() when the button is clicked -->
+			</div>
+		</form>
+    </div>
 </body>
 <footer>
     <a href="index.html">Home</a>
