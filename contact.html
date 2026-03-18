@@ -28,19 +28,19 @@
         <p>Whether you have a question, want to buy from us, or just want to say hi, we’re always here for you. Reach out and let us know how we can make your experience even better. Please enter your name, address, email address, and other relevant information.</p>
 			<!-- Wraps all input fields and enable data submission -->
 			<div>
-				<label for="firstname">First Name</label><input id="firstname" name="firstname" required="" type="text"> <!-- Required tag prevents empty submissions -->
+				<label for="firstname">First Name</label><input id="firstname" name="firstname" required="" type="text" autocomplete="given-name"> <!-- Required tag prevents empty submissions -->
 			</div>
 			<div>
-				<label for="firstname">Last Name</label> <input id="lastname" name="lastname" required="" type="text"> <!-- Required tag prevents empty submissions -->
+				<label for="lastname">Last Name</label> <input id="lastname" name="lastname" required="" type="text" autocomplete="family-name"> <!-- Required tag prevents empty submissions -->
 			</div>
 			<div>
-				<label for="email">Email</label> <input id="email" name="email" required="" type="email"> <!-- Required tag prevents empty submissions -->
+				<label for="email">Email</label> <input id="email" name="email" required="" type="email" autocomplete="email"> <!-- Required tag prevents empty submissions -->
 			</div>
 			<div>
-				<label for="phone">Phone</label> <input id="phone" name="phone" required="" type="text"> <!-- Required tag prevents empty submissions -->
+				<label for="phone">Phone</label> <input id="phone" name="phone" required="" type="text" autocomplete="tel"> <!-- Required tag prevents empty submissions -->
 			</div>
 			<div>
-				<label for="dob">Date of Birth (MM/DD/YYYY)</label> <input id="dob" name="dob" required="" type="text"> <!-- Required tag prevents empty submissions -->
+				<label for="dob">Date of Birth (MM/DD/YYYY)</label> <input id="dob" name="dob" required="" type="text" autocomplete="bday"> <!-- Required tag prevents empty submissions -->
 			</div>
 			<div>
 				<label for="message">Comments</label> 
