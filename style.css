@@ -1,4 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+form input, form textarea {
+	padding: 5px 12px;
+	outline: none;
+	width: 80%;
+}
+form input[type="submit"] {
+	padding: 5px 20px;
+	margin: 20px 0;
+}
+form input, form textarea, form input[type="submit"]{
+	border: 1px solid;
+}
+form div, form input[type="checkbox"] {
+	/*Styling the checkbox*/
+	position: relative;
+}
+form input[type="submit"], form input[type="checkbox"]{
+	width: auto;
+}
+form input[type="checkbox"]+label {
+	/*Select all label elements that are placed immediately after an input checkbox within a form.*/
+	display: inline;
+	font-style: normal;
+}
+input:required {
+	/*Create a rule that targets the input fields that have a required attribute.*/
+	border: 1px solid #598234;
+}
+.input:required+label {
+	/*Targets the label element that appears straight after an input field that has a required attribute in the HTML.*/
+	color: #598234;
+}
+input:required+label::after {
+	/*Create a pseudo element (*) after each of the required label*/
+	content: 'required';
+	font-style: italic;
+	font: .8em
+}
+form input[type="checkbox"]+label, input:required+label::after{
+	padding-left: 10px;
+}
+form>div:last-of-type { /*This means all "div" elements are selected where the parent element is "form."*/
+	margin-top: 20px;
+	border-top: 1px solid;
+	padding-top: 10px;
+}
+form div {
+	margin: 0 0 15px 0;
+}
+form {
+	width: 75%;
+	margin: 25px auto 0 auto;
+}
+form input[type="submit"]{
+  cursor: pointer;
+}
 input[type="checkbox"] {
   margin-top: 15px;   /* space above checkbox */
   margin-bottom: 10px;
