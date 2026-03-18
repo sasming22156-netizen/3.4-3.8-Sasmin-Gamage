@@ -14,28 +14,23 @@ form input[type="submit"] {
 form input, form textarea, form input[type="submit"]{
 	border: 1px solid;
 }
-form div, form input[type="checkbox"] {
-	/*Styling the checkbox*/
+form div, form input[type="checkbox"] { /*Styling the checkbox*/
 	position: relative;
 }
 form input[type="submit"], form input[type="checkbox"]{
 	width: auto;
 }
-form input[type="checkbox"]+label {
-	/*Select all label elements that are placed immediately after an input checkbox within a form.*/
+form input[type="checkbox"]+label { /*Select all label elements that are placed immediately after an input checkbox within a form.*/
 	display: inline;
 	font-style: normal;
 }
-input:required {
-	/*Create a rule that targets the input fields that have a required attribute.*/
+input:required { /*Create a rule that targets the input fields that have a required attribute.*/
 	border: 1px solid #598234;
 }
-.input:required+label {
-	/*Targets the label element that appears straight after an input field that has a required attribute in the HTML.*/
+.input:required+label { /*Targets the label element that appears straight after an input field that has a required attribute in the HTML.*/
 	color: #598234;
 }
-input:required+label::after {
-	/*Create a pseudo element (*) after each of the required label*/
+input:required+label::after { /*Create a pseudo element (*) after each of the required label*/
 	content: 'required';
 	font-style: italic;
 	font: .8em
