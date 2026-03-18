@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+input[type="checkbox"] {
+  margin-top: 15px;   /* space above checkbox */
+  margin-bottom: 10px;
+}
 input[type="checkbox"], input[type="checkbox"] + label {
   display: inline;
 }
