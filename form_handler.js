@@ -1,4 +1,4 @@
-function myFunction(){
+function myFunction(){ // Retrieving data
     var firstname = document.getElementById("firstname").value;
     var lastname = document.getElementById("lastname").value;
     var email = document.getElementById("email").value;
@@ -9,4 +9,7 @@ function myFunction(){
     } else {
         alert(message);
     }
+    var fname = localStorage.setItem("firstname",firstname) // Storing data
+    var lname = localStorage.setItem("lastname", lastname)
+    var em = localStorage.setItem("email",email)
 }
