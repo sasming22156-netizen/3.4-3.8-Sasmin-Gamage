@@ -68,8 +68,7 @@ label, input, textarea {
   color: #5E121F;
 }
 .nav-links{
-  margin-left: auto;
-  margin-right: 8%;
+  float: right;
 }
 small{
     display: block;
@@ -117,8 +116,7 @@ footer a.active:hover{
   color: black;
 }
 .topnav {
-  display: flex;
-  align-items: center;
+  overflow: hidden;
   background-color: #93C193;
 }
 .topnav a {
@@ -148,14 +146,15 @@ footer a.active:hover{
   display: none;
 }
 body{
-    background-color: #453724;
+  margin: 0;
+  background-color: #453724;
 }
 .topnav img{/*styling for the logo on the left of navbar*/
     float: left;
     height: 60px;
     width: auto;
     padding: 1px 0px;
-    margin-left: 15px;
+    margin-left: 10%;
     margin-right: 30px;
 }
 .main_content{
@@ -186,6 +185,12 @@ p,li{
   background-size: cover;
 }
 @media screen and (max-width:768px){
+  .nav-links{
+    display: none;
+  }
+  .topnav.responsive .nav-links a, .topnav.responsive .nav-links{
+    display: block;
+  }
   .topnav a:not(:first-child) {display: none;} /* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   .topnav a.icon {
     float: right;
@@ -204,6 +209,9 @@ p,li{
   }
   .topnav a:first-of-type{ /* This makes room for the logo at the top */
       margin-top: 60px;
+  }
+  .topnav img{
+    margin-left: 2%;
   }
   .main_content{
       width: 95%;
