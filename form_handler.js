@@ -17,38 +17,4 @@ function submitContactForm(event) { // Retrieving data
     var fname = localStorage.setItem("firstname",firstname) // Storing data
     var lname = localStorage.setItem("lastname", lastname)
     var em = localStorage.setItem("email",email)
-    var  formData = {
-        records: [
-            {
-                fields: {
-                    "First Name": firstname,
-                    "Last Name": lastname,
-                    "Email": email,
-                    "Phone Number": phone,         
-                    "Date of Birth": dob,           
-                    "Comments": comments
-                }
-            }
-        ]
-    }
-    fetch(
-        "https://api.airtable.com/v0/app0LuwlBRJfEvV22/Table%201",{
-            method: "POST",
-            headers:{
-                "Content-Type": "application/json",
-                Authorization: "Bearer patyb30w6G6BLx8uW.6f6fa8a5b3ec6524c81a12ff9a1e2819c77b5c245869509018b6771092781d71",
-            },
-            body: JSON.stringify(formData),
-        })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        console.log("Success:", data);
-        alert(message);
-    })
-    .catch(function(error) {
-        console.error("Error:", error);
-        alert("There was a problem submitting your form.");
-    });
 }
