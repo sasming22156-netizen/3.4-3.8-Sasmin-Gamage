@@ -75,13 +75,18 @@ small{
     margin-top: 15px;
 }
 footer{
-  height: 100px;
+  min-height: 100px;
   background-color: #93C193;
   font-size: 18px;
   padding: 3%;
   color: white;
   font-family: "Inter", sans-serif; /* This is imported from Google Fonts */
   text-align: center;
+}
+footer img {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
 }
 footer .left_anchor{ /* Furthest left anchor has 10% margin left to line up with main content */
   margin-left: 8%;
