@@ -1,4 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.card img{
+  width: 50%;
+  height: auto;
+}
+.card img:hover{
+  opacity: 50%;
+}
+* {
+  box-sizing: border-box;
+}
+.column { /* Float four columns side by side */
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.row {margin: 0 -5px;} /* Remove extra left and right margins, due to padding in columns */
+.row:after { /* Clear floats after the columns */
+  content: "";
+  display: table;
+  clear: both;
+}
+.card { /* Style the counter cards */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
 a{
   text-decoration: none;
   position: relative;
@@ -231,6 +258,14 @@ p,li{
   background-size: cover;
 }
 @media screen and (max-width:768px){
+  .card img{
+    width: 100%;
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
   .nav-links{
     display: none;
   }
