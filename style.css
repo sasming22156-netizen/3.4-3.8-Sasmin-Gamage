@@ -33,7 +33,7 @@
   width: 50%;
   height: auto;
 }
-.card img:hover{
+.card img:hover{ /*this will change the opacity of my card images*/
   opacity: 50%;
 }
 * {
@@ -288,6 +288,9 @@ p,li{
   background-size: cover;
 }
 @media screen and (max-width:768px){
+  .pop_up_image img{
+    width: 80%;
+  }
   .card img{
     width: 100%;
   }

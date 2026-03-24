@@ -53,6 +53,17 @@
         </div>
     </div> 
 </body>
+<script>
+	document.querySelectorAll('.card img').forEach(image =>{
+	    image.onclick = () =>{
+	        document.querySelector('.pop_up_image').style.display = 'block';
+	        document.querySelector('.pop_up_image img').src = image.getAttribute('src');
+	    }
+	})               
+	document.querySelector('.pop_up_image span').onclick = () =>{
+	document.querySelector('.pop_up_image').style.display = 'none';
+	}
+</script>
 <footer>
     <a href="index.html">Home</a>
     <a href="our_story.html" class="active">Our Story</a>
