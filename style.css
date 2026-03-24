@@ -1,4 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.pop_up_image { /*Modal for Gallery*/
+	position: fixed; /*The styling for the image container that pops up when clicked*/
+	top: 0; /*Makes the image stay in the same place even when scrolling*/
+	left: 0; /*Positions the container at the center, using the top left cornor*/
+	background: rgba(0, 0, 0, 0.9); /*Makes the rest of the page dark*/
+	height: 100%; /*Makes the container take up the whole height and width*/
+	width: 100%;
+	z-index: 100; /*Puts it in front of the other elemts*/
+	display: none; /*Doesn't show until the image is clicked on*/
+}
+.pop_up_image span { /*Used to creat the close button X*/
+	position: absolute; /*Makes it possible to position using top and right*/
+	top: 0; /*Puts it near the top right corner, 10px from the right*/
+	right: 10px;
+	font-size: 40px;
+	font-weight: bolder; /*Makes it bold for easier visibility*/
+	color: #FFFFFF;
+	cursor: pointer; /*Makes the cursor a pointer to tell the user it can be clicked on*/
+	z-index: 100; /*Puts it in front of the rest of the page*/
+}
+.pop_up_image img {
+	position: absolute; /*Makes it so the image can be controlled using top and left*/
+	top: 50%; /*Puts it top left corner at the center*/
+	left: 50%;
+	transform: translate(-50%, -50%); /*moves it so the middle point is at the center*/
+	border: 5px solid #fff;
+	border-radius: 5px;
+	width: 750px;
+	object-fit: cover; /*Makes the aspect ratio stay the same in all device sizes*/
+}
 .card img{
   width: 50%;
   height: auto;
