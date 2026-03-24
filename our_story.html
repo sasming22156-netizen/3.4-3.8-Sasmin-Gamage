@@ -32,7 +32,7 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="images/air_freshner.jpg">
+                    <img alt="air freshener" src="images/air_freshner.jpg">
                 </div>
             </div>
             <div class="column">
@@ -53,7 +53,19 @@
         </div>
     </div> 
 </body>
-<script>
+<div class="pop_up_image">
+    <img alt="air freshener" src="images/air_freshner.jpg">
+</div>
+<div class="pop_up_image">
+    <img src="images/broke_boy.jpg">
+</div>
+<div class="pop_up_image">
+    <img src="images/fast_athlete.jpg">
+</div>
+<div class="pop_up_image">
+    <img src="images/fight_bison.jpg">
+</div>
+<script> /* Javascript and the code for the modal */
 	document.querySelectorAll('.card img').forEach(image =>{
 	    image.onclick = () =>{
 	        document.querySelector('.pop_up_image').style.display = 'block';
