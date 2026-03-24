@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.contact_intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.contact_text {
+  flex: 1;
+}
+.contact_image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+.contact_image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
 .pop_up_image { /*Modal for Gallery*/
 	position: fixed; /*The styling for the image container that pops up when clicked*/
 	top: 0; /*Makes the image stay in the same place even when scrolling*/
@@ -288,6 +309,22 @@ p,li{
   background-size: cover;
 }
 @media screen and (max-width:768px){
+  .contact_intro {
+    margin-top: 25px;
+    flex-direction: column; /* stack items */
+    margin-bottom: -15px;
+  }
+  .contact_image {
+    order: -1; /* moves image ABOVE text */
+    width: 100%;
+    justify-content: center;
+    margin-bottom: -15px;
+  }
+  .contact_image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
   .pop_up_image img{
     width: 80%;
   }
