@@ -292,9 +292,15 @@ body{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
+.nav_bar_title{
+  margin-top: 30px;
+  text-shadow: none;
+  float: left;
+}
 h1,h4{
     font-family: Archivo Black;
-    color: #5E121F;;
+    color: #5E121F;
+    text-shadow: 0 0 5px #C87620;
 }
 p,li{
     font: 200 16px Inter;
@@ -308,7 +314,10 @@ p,li{
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:900px){
+  .topnav.responsive .nav_bar_title{
+    margin-left: 30px;
+  }
   .contact_intro {
     margin-top: 25px;
     flex-direction: column; /* stack items */
@@ -339,6 +348,9 @@ p,li{
   .nav-links{
     display: none;
   }
+  .topnav{
+    position: relative;
+  }
   .topnav.responsive .nav-links {
     display: block;
     width: 100%;
@@ -349,14 +361,19 @@ p,li{
   }
   .topnav a:not(:first-child) {display: none;} /* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   .topnav a.icon {
-    float: right;
     display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    float: none;
+    margin-right: 0;
+    padding: 12px 14px;
   }
   .topnav.responsive {position: relative;} /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   .topnav.responsive a.icon {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
   }
   .topnav.responsive a {
     float: none;
