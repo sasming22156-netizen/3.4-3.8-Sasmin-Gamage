@@ -243,12 +243,20 @@ footer a.active:hover{
   overflow: hidden;
   background-color: #93C193;
 }
+.topnav h1{
+  margin: 0;
+  line-height: 60px;
+  font-size: 32px;
+  display: inline-block;
+}
 .topnav a {
   float: left;
   display: block;
+  height: 60px;
+  line-height: 60px;
   color: #f2f2f2;
   text-align: center;
-  padding: 22px 16px;
+  padding: 0 16px;
   text-decoration: none;
   font-size: 17px;
   font-family: "Inter", sans-serif;
@@ -364,8 +372,8 @@ p,li{
   .topnav a.icon {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -10px;
+    right: 0px;
     float: none;
     margin-right: 0;
     padding: 12px 14px;
@@ -373,8 +381,8 @@ p,li{
   .topnav.responsive {position: relative;} /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   .topnav.responsive a.icon {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 0px;
+    top: -10px;
   }
   .topnav.responsive a {
     float: none;
