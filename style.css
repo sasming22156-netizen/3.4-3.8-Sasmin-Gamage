@@ -299,6 +299,7 @@ body{
     background-color: #F7DCA1;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
 .nav_bar_title{
   margin-top: 30px;
@@ -312,7 +313,7 @@ h1,h4{
     text-align: center;
 }
 p,li{
-    font: 200 16px Inter;
+    font: 300 16px Inter;
     color: #5E121F;
 }
 .parallax {
@@ -322,6 +323,10 @@ p,li{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 0.3s ease;
+}
+.parallax:hover{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 @media screen and (max-width:900px){
   .topnav.responsive .nav_bar_title{
@@ -394,5 +399,6 @@ p,li{
   }
   .main_content{
       width: 95%;
+      transition: all 0.3s ease;
   }
 }

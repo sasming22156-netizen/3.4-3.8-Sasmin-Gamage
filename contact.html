@@ -47,7 +47,7 @@
                     <label for="email">Email</label> <input id="email" name="email" required="" type="email" autocomplete="email"> <!-- Required tag prevents empty submissions -->
                 </div>
                 <div>
-                    <label for="phone">Phone</label> <input id="phone" name="phone" required="" type="text" autocomplete="tel"> <!-- Required tag prevents empty submissions -->
+                    <label for="phone">Phone</label> <input id="phone" name="phone" required type="tel" autocomplete="tel" pattern="[0-9+\-\s()]{7,15}" title="Please enter a valid phone number"> <!-- Required tag prevents empty submissions -->
                 </div>
                 <div>
                     <label for="dob">Date of Birth (MM/DD/YYYY)</label> <input id="dob" name="dob" required="" type="text" autocomplete="bday"> <!-- Required tag prevents empty submissions -->
