@@ -11,7 +11,7 @@ iframe{
   margin-bottom: 20px;
 }
 .contact_text {
-  flex: 1;
+  flex: 1; /* Allows this element to grow and take up remaining space */
 }
 .contact_image {
   flex: 0 0 300px;
