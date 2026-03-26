@@ -310,11 +310,13 @@ body{
   text-shadow: none;
   float: left;
 }
-h1,h4{
+h1{
     font-family: Archivo Black;
     color: #5E121F;
     text-shadow: 0 0 5px #C87620;
     text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 p,li{
     font: 300 16px Inter;
