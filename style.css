@@ -301,6 +301,7 @@ h1,h4{
     font-family: Archivo Black;
     color: #5E121F;
     text-shadow: 0 0 5px #C87620;
+    text-align: center;
 }
 p,li{
     font: 200 16px Inter;
