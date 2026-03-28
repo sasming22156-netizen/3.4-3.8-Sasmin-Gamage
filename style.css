@@ -198,7 +198,7 @@ small{
 }
 footer{
   min-height: 100px;
-  background-color: #93C193;
+  background-color: #941a27;
   font-size: 18px;
   padding: 3%;
   color: white;
@@ -235,7 +235,7 @@ footer a:hover {
   color: black;
 }
 footer a.active {
-  background-color: #284868;
+  background-color: #C87620;
   color: white;
 }
 footer a.active:hover{
@@ -245,13 +245,15 @@ footer a.active:hover{
 .topnav {
   position: relative;
   overflow: hidden;
-  background-color: #93C193;
+  background-color: #941a27;
 }
 .topnav h1{
   margin: 0;
   line-height: 60px;
   font-size: 32px;
   display: inline-block;
+  color: #C87620;
+  margin-left: -10px;
 }
 .topnav a {
   float: left;
@@ -271,7 +273,7 @@ footer a.active:hover{
   color: black;
 }
 .topnav a.active {
-  background-color: #284868;
+  background-color: #C87620;
   color: white;
 }
 .topnav a.active:hover{
