@@ -254,6 +254,7 @@ footer a.active:hover{
   display: inline-block;
   color: #C87620;
   margin-left: -10px;
+  transition: all 0.3s ease;
 }
 .topnav a {
   float: left;
@@ -337,6 +338,12 @@ p,li{
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 @media screen and (max-width:900px){
+  .topnav > a:first-child:hover {
+    width: 25%;
+  }
+  .topnav.responsive h1:first-of-type{
+    margin-bottom: -60px;
+  }
   .topnav.responsive .nav_bar_title{
     margin-left: 30px;
   }
@@ -410,3 +417,12 @@ p,li{
       transition: all 0.3s ease;
   }
 }
+@media screen and (max-width: 400px){
+  .topnav h1{
+    font-size: 20px;
+    line-height: 50px;
+    margin-left: -40px;
+    margin-top: 2.5px;
+    transition: all 0.3s ease;
+  }
+} 
