@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
 iframe{
   display: block;
   margin: 20px auto;
@@ -223,7 +223,6 @@ footer a{
   text-align: center;
   text-decoration: none;
   font-size: 17px;
-  font-family: "Inter", sans-serif;
   margin: 0 15px; /* adds space left & right of each link */
 }
 footer p{
@@ -247,6 +246,9 @@ footer a.active:hover{
   overflow: hidden;
   background-color: #941a27;
 }
+.topnav h1, .topnav a, footer a, footer small{
+  font-family: New Rocker;
+}
 .topnav h1{
   margin: 0;
   line-height: 60px;
@@ -266,7 +268,6 @@ footer a.active:hover{
   padding: 0 16px;
   text-decoration: none;
   font-size: 17px;
-  font-family: "Inter", sans-serif;
   margin-right: 15px;
 }
 .topnav a:hover {
@@ -286,7 +287,7 @@ footer a.active:hover{
 }
 body{
   margin: 0;
-  background-color: #453724;
+  background-color: #36302D;
 }
 .topnav img{/*styling for the logo on the left of navbar*/
     float: left;
@@ -308,6 +309,9 @@ body{
     border-radius: 5px;
     transition: all 0.3s ease;
 }
+.main_content p{
+  text-align: center;
+}Z
 .nav_bar_title{
   margin-top: 30px;
   text-shadow: none;
@@ -326,7 +330,7 @@ p,li{
     color: #5E121F;
 }
 .parallax {
-  background-image: url("images/lifting_weight.jpg"); /* The image used */
+  background-image: url("images/muscle_man.jpg"); /* The image used */
   min-height: 500px; /* Set a specific height */
   background-attachment: fixed; /* Create the parallax scrolling effect */
   background-position: center;
@@ -338,7 +342,7 @@ p,li{
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 @media screen and (max-width:900px){
-  .topnav > a:first-child:hover {
+  .topnav.responsive > a:first-child:hover {
     width: 25%;
   }
   .topnav.responsive h1:first-of-type{
