@@ -205,7 +205,6 @@ small{
     margin-top: 15px;
 }
 footer{
-  min-height: 100px;
   background-color: #941a27;
   font-size: 18px;
   padding: 3%;
@@ -305,6 +304,7 @@ body{
 }
 .main_content{
     width: 80%;
+    max-width: 1000px;
     text-align: justify;
     box-sizing: border-box;
     overflow: hidden;
