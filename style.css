@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
+.float_right{
+  float: right;
+  margin: 0 20px 0 0px; /* spacing from text */
+  width: 270px; /* control size */
+}
+.float_right:hover{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
+}
 iframe{
   display: block;
   margin: 20px auto;
@@ -414,6 +422,13 @@ p,li{
   .main_content{
       width: 95%;
       transition: all 0.3s ease;
+  }
+}
+@media screen and (max-width: 650px){
+  .float_right{
+    float: none; /* remove floating */     
+    width: 100%; /* full width */
+    margin: 10px 0 10px 0; /* spacing below image */
   }
 }
 @media screen and (max-width: 400px){
