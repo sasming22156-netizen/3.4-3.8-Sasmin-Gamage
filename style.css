@@ -212,6 +212,8 @@ footer{
   font-family: "Inter", sans-serif; /* This is imported from Google Fonts */
   text-align: center;
   margin-top: auto;
+  margin-top: 0; /* Remove the auto margin */
+  flex-grow: 1; /* Tells the footer to stretch to the bottom of the screen */
 }
 footer img {
   width: 32px;
