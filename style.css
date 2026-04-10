@@ -211,6 +211,7 @@ footer{
   color: white;
   font-family: "Inter", sans-serif; /* This is imported from Google Fonts */
   text-align: center;
+  margin-top: auto;
 }
 footer img {
   width: 32px;
@@ -290,9 +291,15 @@ footer a.active:hover{
 .topnav .icon {
   display: none;
 }
-body{
+html, body {
   margin: 0;
+  padding: 0;
+}
+body{
   background-color: #453724;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .topnav img{/*styling for the logo on the left of navbar*/
     float: left;
