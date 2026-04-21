@@ -22,15 +22,17 @@ iframe{
   flex: 1; /* Allows this element to grow and take up remaining space */
 }
 .contact_image {
-  flex: 0 0 300px;
-  display: flex;
-  justify-content: flex-end;
+  text-align: center;
+  margin: 20px 0;
 }
 .contact_image img {
   width: 100%;
   max-width: 300px;
   height: auto;
   border-radius: 10px;
+}
+.contact_image img:hover{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 .pop_up_image { /*Modal for Gallery*/
 	position: fixed; /*The styling for the image container that pops up when clicked*/
@@ -382,6 +384,7 @@ p,li{
 @media screen and (max-width:900px){
   .topnav h1{
     margin-left: 15px;
+    transition: all 0.3s ease;
   }
   .topnav > a:first-child {
     display: inline-flex;
@@ -413,6 +416,10 @@ p,li{
     width: 100%;
     max-width: 100%;
     height: auto;
+    transition: all 0.3s ease;
+  }
+  .contact_image img:hover{
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
   }
   .pop_up_image img{
     width: 80%;
@@ -476,8 +483,8 @@ p,li{
   .topnav h1{
     font-size: 20px;
     line-height: 50px;
-    margin-left: -40px;
-    margin-top: 2.5px;
+    margin-left: -10px;
+    margin-top: 3px;
     transition: all 0.3s ease;
   }
 } 
