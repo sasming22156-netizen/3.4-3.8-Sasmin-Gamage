@@ -380,11 +380,23 @@ p,li{
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 @media screen and (max-width:900px){
+  .topnav h1{
+    margin-left: 15px;
+  }
+  .topnav > a:first-child {
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+  }
   .topnav.responsive h1:first-of-type{
     margin-bottom: -60px;
   }
   .topnav.responsive .nav_bar_title{
-    margin-left: 30px;
+    margin-left: 15px;
   }
   .contact_intro {
     margin-top: 25px;
@@ -447,9 +459,6 @@ p,li{
     float: none;
     display: block;
     text-align: left;
-  }
-  .topnav img{
-    margin-left: 2%;
   }
   .main_content{
       width: 95%;
