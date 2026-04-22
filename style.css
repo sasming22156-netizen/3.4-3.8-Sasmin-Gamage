@@ -25,7 +25,7 @@ iframe{
   text-align: center;
   margin: 20px 0;
 }
-.contact_image img {
+.contact_image img { /* Keeps image responsive while maintaining aspect ratio */
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -62,7 +62,7 @@ iframe{
 	border: 5px solid #fff;
 	border-radius: 5px;
 	width: 750px;
-	object-fit: cover; /*Makes the aspect ratio stay the same in all device sizes*/
+	object-fit: cover; /* Ensures images fill container without distortion (important for different screen sizes) */
 }
 .card img{
   width: 50%;
@@ -72,7 +72,7 @@ iframe{
   opacity: 50%;
 }
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures padding and borders are included in total width/height, prevents layout breaking on smaller screens */
 }
 .column { /* Float four columns side by side */
   float: left;
@@ -117,7 +117,7 @@ form input[type="checkbox"]+label { /*Select all label elements that are placed 
 	font-style: normal;
 }
 input:required { /*Create a rule that targets the input fields that have a required attribute.*/
-	border: 1px solid #598234;
+	border: 1px solid #598234; /* Visually highlights required fields for better usability */
 }
 .input:required+label { /*Targets the label element that appears straight after an input field that has a required attribute in the HTML.*/
 	color: #598234;
@@ -220,7 +220,7 @@ footer a.active:hover{
 }
 .topnav {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Prevents child elements from spilling outside navbar */
   background-color: #941a27;
   transition: box-shadow 0.35s ease, background-color 0.35s ease;
 }
@@ -277,7 +277,7 @@ footer a.active:hover{
   bottom: 10px;
   height: 3px;
   background-color: #F7DCA1;
-  transform: scaleX(0);
+  transform: scaleX(0); /* Hidden underline effect that animates on hover */
   transform-origin: center;
   transition: transform 0.3s ease;
   border-radius: 999px;
@@ -288,7 +288,7 @@ footer a.active:hover{
   transform: translateY(-2px);
 }
 .topnav a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); /* Smooth hover animation improves user experience and visual feedback */
 }
 .topnav a.active {
   background-color: #C87620;
@@ -303,7 +303,7 @@ footer a.active:hover{
   color: white;
 }
 .topnav .icon {
-  display: none;
+  display: none; /* Hidden by default, only shown in mobile view via media query */
 }
 .topnav a.icon {
   border-radius: 10px;
@@ -439,14 +439,14 @@ p,li{
     position: relative;
   }
   .topnav.responsive .nav-links {
-    display: block;
+    display: block; /* JavaScript toggles this class to show/hide menu on small screens */
     width: 100%;
     margin-top: 70px; /* pushes menu BELOW navbar */
   }
   .topnav.responsive .nav-links a, .topnav.responsive .nav-links{
     display: block;
   }
-  .topnav a:not(:first-child) {display: none;} /* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  .topnav a:not(:first-child) {display: none;} /* Hides navigation links on small screens to reduce clutter */
   .topnav a.icon {
     display: block;
     position: absolute;
