@@ -10,6 +10,7 @@
 iframe{
   display: block;
   margin: 20px auto;
+  border-radius: 5px;
 }
 .contact_intro {
   display: flex;
@@ -367,7 +368,7 @@ h1{
 }
 p,li{
     font: 300 16px Inter;
-    color: #5E121F;
+    color: #2b0910;
 }
 .parallax {
   background-image: url("images/muscle_man.jpg"); /* The image used */
