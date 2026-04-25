@@ -14,17 +14,17 @@ iframe{
 }
 .contact_intro {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin-bottom: 20px;
+}
+.contact_intro h1 {
+  flex: 1;
 }
 .contact_text {
-  flex: 1; /* Allows this element to grow and take up remaining space */
+  flex: 2;
 }
 .contact_image {
-  text-align: center;
-  margin: 20px 0;
+  flex: 1;
 }
 .contact_image img { /* Keeps image responsive while maintaining aspect ratio */
   width: 100%;
@@ -343,7 +343,7 @@ body{
 .main_content{
     width: 80%;
     max-width: 1000px;
-    text-align: justify;
+    text-align: left;
     box-sizing: border-box;
     overflow: hidden;
     margin: 20px auto;
@@ -406,15 +406,19 @@ p,li{
     margin-left: 15px;
   }
   .contact_intro {
-    margin-top: 25px;
-    flex-direction: column; /* stack items */
-    margin-bottom: -15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact_text {
+    display: contents;
+  }
+  .contact_text h1 {
+    order: 1; /* heading first */
   }
   .contact_image {
-    order: -1; /* moves image ABOVE text */
+    order: 2; /* image second */
     width: 100%;
-    justify-content: center;
-    margin-bottom: -15px;
   }
   .contact_image img {
     width: 100%;
@@ -424,6 +428,9 @@ p,li{
   }
   .contact_image img:hover{
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
+  }
+  .contact_text p {
+    order: 3; /* paragraph last */
   }
   .pop_up_image img{
     width: 80%;
