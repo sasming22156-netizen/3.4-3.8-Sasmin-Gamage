@@ -10,7 +10,7 @@
     <script src="responsive_nav.js"></script> <!-- JavaScript for responsive navigation -->
     <title>Our Story | Kiwi Cakes NZ Business Journey</title> <!-- Page title shown in browser tab -->
 </head>
-<body>
+<body> <!-- Contains all visible page content -->
     <div class="topnav" id="myTopnav"> <!-- Navigation bar -->
         <a href="index.html"><img src="images/new_kiwicake_logo.png" alt="Kiwi Cake Home"></a> <!-- Logo links back to homepage -->
         <h1 class="nav_bar_title">Kiwi Cakes</h1> <!-- Website title in navbar -->
@@ -24,50 +24,65 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    <div class="main_content">
-        <h1>Our Story</h1>
-        <p>Initially, Kiwi Cakes planned to develop a product featuring refillable air fresheners. However, after talking with Reegan (YES Spokesperson) about our air freshener idea, he encouraged the business to move away from it, as the market is quite saturated and the best way to sell it would be to businesses or large events (i.e., Fonterra). This is as if it isn’t sold in bulk, then it isn’t likely to succeed.</p>
-        <p>Our solution was to create a protein-rich cake that is affordable, convenient, and made using simple ingredients. By focusing on accessibility and value, Kiwi Cakes provides a realistic alternative to expensive protein powders and bars.</p>
-        <p>Kiwi Cakes was created to solve a common problem faced by many gym-goers: high-protein foods and supplements are often expensive, overly processed, or filled with artificial ingredients. Many students and low to middle-income individuals struggle to afford quality protein options that support their fitness goals.</p>
-        <p>Our target audience includes health-focused individuals aged 13–65, particularly gym-goers and eco-conscious consumers who want a product that aligns with both their fitness and sustainability values.</p>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <img alt="air freshener" src="images/air_freshner.jpg">
+    <main> <!-- Main section of the page (helps structure the site properly for accessibility and SEO) -->
+        <div class="main_content"> <!-- Main content wrapper (used for padding, layout, readability) -->
+            <h1>Our Story</h1> <!-- Main heading for SEO + accessibility -->
+            <p>Initially, Kiwi Cakes planned to develop a product featuring refillable air fresheners. However, after talking with Reegan (YES Spokesperson) about our air freshener idea, he encouraged the business to move away from it, as the market is quite saturated and the best way to sell it would be to businesses or large events (i.e., Fonterra). This is as if it isn’t sold in bulk, then it isn’t likely to succeed.</p>
+            <p>Our solution was to create a protein-rich cake that is affordable, convenient, and made using simple ingredients. By focusing on accessibility and value, Kiwi Cakes provides a realistic alternative to expensive protein powders and bars.</p>
+            <p>Kiwi Cakes was created to solve a common problem faced by many gym-goers: high-protein foods and supplements are often expensive, overly processed, or filled with artificial ingredients. Many students and low to middle-income individuals struggle to afford quality protein options that support their fitness goals.</p>
+            <p>Our target audience includes health-focused individuals aged 13–65, particularly gym-goers and eco-conscious consumers who want a product that aligns with both their fitness and sustainability values.</p>
+            <div class="row"> <!-- Groups images into a row layout -->
+                <div class="column">
+                    <div class="card"> <!-- Card layout helps make images look clean and structured -->
+                        <img alt="air freshener" src="images/air_freshner.jpg">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card"> <!-- Card layout helps make images look clean and structured -->
+                        <img alt="broke boy" src="images/broke_boy.jpg">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card"> <!-- Card layout helps make images look clean and structured -->
+                        <img alt="fast athlete" src="images/fast_athlete.jpg">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card"> <!-- Card layout helps make images look clean and structured -->
+                        <img alt="bison fight" src="images/fight_bison.jpg">
+                    </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <img src="images/broke_boy.jpg">
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <img src="images/fast_athlete.jpg">
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <img src="images/fight_bison.jpg">
-                </div>
-            </div>
-        </div>
-    </div> 
+        </div> 
+    </main>
+<footer> <!-- Footer section, contains secondary navigation and branding -->
+    <a href="index.html">Home</a> |
+    <a href="our_story.html" class="active">Our Story</a> |
+    <a href="product_page.html">Our Product</a> |
+    <a href="contact.html">Contact Us</a>
+    <small>©2026 Copyright, All Rights Reserved</small> <!-- legal information -->
+    <a href="https://www.instagram.com/kiwi.cakes.obhs/" target="_blank"> <!-- social media link -->
+        <img src="/images/instagram_logo.svg" alt="instagram logo">
+    </a>
+    <a href="https://www.youtube.com/channel/UCoPKYkIYiv6hY9eaYTZz3-Q" target="_blank"> <!-- second social platform -->
+        <img src="/images/youtube_logo.svg" alt="youtube logo">
+    </a>
+</footer>
 </body>
 <div class="pop_up_image">
-    <span>&times;</span>
+    <span>&times;</span> <!-- Close button -->
     <img alt="air freshener" src="images/air_freshner.jpg">
 </div>
 <div class="pop_up_image">
-    <span>&times;</span>
+    <span>&times;</span> <!-- Close button -->
     <img src="images/broke_boy.jpg">
 </div>
 <div class="pop_up_image">
-    <span>&times;</span>
+    <span>&times;</span> <!-- Close button -->
     <img src="images/fast_athlete.jpg">
 </div>
 <div class="pop_up_image">
-    <span>&times;</span>
+    <span>&times;</span> <!-- Close button -->
     <img src="images/fight_bison.jpg">
 </div>
 <script> /* Javascript and the code for the modal */
@@ -81,17 +96,4 @@
 	document.querySelector('.pop_up_image').style.display = 'none';
 	}
 </script>
-<footer>
-    <a href="index.html">Home</a> |
-    <a href="our_story.html" class="active">Our Story</a> |
-    <a href="product_page.html">Our Product</a> |
-    <a href="contact.html">Contact Us</a>
-    <small>©2026 Copyright, All Rights Reserved</small>
-    <a href="https://www.instagram.com/kiwi.cakes.obhs/" target="_blank">
-        <img src="/images/instagram_logo.svg" alt="instragram logo">
-    </a>
-    <a href="https://www.youtube.com/channel/UCoPKYkIYiv6hY9eaYTZz3-Q" target="_blank">
-        <img src="/images/youtube_logo.svg" alt="youtube logo">
-    </a>
-</footer>
 </html>
