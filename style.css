@@ -267,10 +267,25 @@ html, body {
   padding: 0; /* removes browser default spacing */
 }
 body{
-  background-color: #453724; /* dark background for contrast */
+  background-size: cover; /* fills screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* gives nice depth/parallax feel */
   display: flex;
   flex-direction: column; /* enables sticky footer layout */
   min-height: 100vh; /* ensures full screen height */
+}
+.home_page{
+  background-image: url("images/main_image.png"); 
+}
+.story_page{
+  background-image: url(images/muscle_man.jpg);
+}
+.product_page{
+
+}
+.contact_page{
+
 }
 .main_content{
     width: 80%;
@@ -278,11 +293,12 @@ body{
     text-align: left;
     box-sizing: border-box;
     overflow: hidden;
-    margin: 20px auto; /* centers content */
+    margin: 40px auto; /* centers content */
     padding: 30px;
     background-color: #F7DCA1; /* light contrast against dark body */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 .main_content:hover{
@@ -304,18 +320,6 @@ h1{
 p,li{
     font: 300 16px Inter;
     color: #2b0910; /* readable dark text */
-}
-.parallax {
-  background-image: url("images/muscle_man.jpg"); /* The image used */
-  min-height: 500px; /* Set a specific height */
-  background-attachment: fixed; /* Create the parallax scrolling effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 0.3s ease;
-}
-.parallax:hover{
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
 @media screen and (max-width:1050px){ /* Applies these layout changes on tablets and smaller screens */
   .topnav h1{
