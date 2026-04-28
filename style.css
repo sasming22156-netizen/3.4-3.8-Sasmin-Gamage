@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap'); /* Imports custom fonts for typography consistency and branding */
 .float_right{
-  float: right;
   margin: 0 20px 0 0px; /* spacing from text */
   width: 270px; /* control size */
 }
@@ -17,17 +16,16 @@ iframe{
   align-items: center; /* vertically aligns items */
   gap: 30px; /* Creates consistent spacing between heading, text, and image for visual balance */
 }
-.contact_intro h1 {
-  flex: 1; /* allows heading to take proportional space */
+.contact_intro h1, .contact_image {
+  flex: 1; /* allows heading to take proportional space, keeps image smaller so it supports content rather than dominating it */
 }
 .contact_text {
   flex: 2; /* Gives text more space than image to improve readability and hierarchy */
 }
-.contact_image {
-  flex: 1; /* Keeps image smaller so it supports content rather than dominating it */
+.contact_image img, .pop_up_image{
+  width: 100%; /* scales image within container */
 }
 .contact_image img { /* Keeps image responsive while maintaining aspect ratio */
-  width: 100%; /* scales image within container */
   max-width: 300px; /* prevents oversized images */
   height: auto; /* maintains aspect ratio */
   border-radius: 10px; /* rounded corners for modern feel */
@@ -37,17 +35,17 @@ iframe{
 }
 .pop_up_image { /*Modal for Gallery*/
 	position: fixed; /*The styling for the image container that pops up when clicked*/
-	top: 0; /*Makes the image stay in the same place even when scrolling*/
 	left: 0; /*Positions the container at the center, using the top left cornor*/
 	background: rgba(0, 0, 0, 0.9); /*Makes the rest of the page dark*/
 	height: 100%; /*Makes the container take up the whole height and width*/
-	width: 100%;
 	z-index: 100; /*Puts it in front of the other elemts*/
 	display: none; /*Doesn't show until the image is clicked on*/
 }
+.pop_up_image, .pop_up_image span{
+  top: 0; /*Puts it near the top right corner, 10px from the right. Makes the image stay in the same place even when scrolling*/
+}
 .pop_up_image span { /*Used to creat the close button X*/
 	position: absolute; /*Makes it possible to position using top and right*/
-	top: 0; /*Puts it near the top right corner, 10px from the right*/
 	right: 10px;
 	font-size: 40px;
 	font-weight: bolder; /*Makes it bold for easier visibility*/
@@ -92,7 +90,7 @@ iframe{
   text-align: center;
   background-color: #f1f1f1;
 }
-.nav-links{
+.nav-links, .float_right{
   float: right; /* pushes navigation links to the right side of navbar, helps separate branding (left) from navigation (right) */
 }
 small{
@@ -175,11 +173,14 @@ footer a.active:hover{
 .topnav img{/*styling for the logo on the left of navbar*/
     float: left;
     height: 60px; /* matches navbar height */
-    width: auto;
-    padding: 1px 0px;
-    margin-left: 10%;
-    margin-right: 30px;
+    margin: 0;
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+.nav_inner {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden; /* keeps floats contained */
 }
 .topnav img:hover{
   transform: scale(1.05); /* slight zoom for interaction */
@@ -288,7 +289,7 @@ body{
   transform: translateY(-3px); /* subtle hover elevation */
 }
 .nav_bar_title{
-  margin-top: 30px;
+  margin-left: 10px;
   text-shadow: none;
   float: left; /* keeps title aligned left */
 }
@@ -316,7 +317,7 @@ p,li{
 .parallax:hover{
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
 }
-@media screen and (max-width:900px){ /* Applies these layout changes on tablets and smaller screens */
+@media screen and (max-width:1050px){ /* Applies these layout changes on tablets and smaller screens */
   .topnav h1{
     margin-left: 15px; /* moves title slightly right for better mobile spacing */
     transition: all 0.3s ease; /* keeps movement smooth when layout changes */
