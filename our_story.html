@@ -12,17 +12,19 @@
 </head>
 <body class="story_page"> <!-- Contains all visible page content -->
     <div class="topnav" id="myTopnav"> <!-- Navigation bar -->
-        <a href="index.html"><img src="images/new_kiwicake_logo.png" alt="Kiwi Cake Home"></a> <!-- Logo links back to homepage -->
-        <h1 class="nav_bar_title">Kiwi Cakes</h1> <!-- Website title in navbar -->
-        <div class="nav-links"> <!-- Navigation links -->
-            <a href="index.html">Home</a>
-            <a href="our_story.html" class="active">Our Story</a> <!-- active class highlights current page, improves user awareness of location -->
-            <a href="product_page.html">Our Product</a>
-            <a href="contact.html">Contact Us</a>
+        <div class="nav_inner">
+            <a href="index.html"><img src="images/new_kiwicake_logo.png" alt="Kiwi Cake Home"></a> <!-- Logo links back to homepage -->
+            <h1 class="nav_bar_title">Kiwi Cakes</h1> <!-- Website title in navbar -->
+            <div class="nav-links"> <!-- Navigation links -->
+                <a href="index.html">Home</a>
+                <a href="our_story.html" class="active">Our Story</a> <!-- active class highlights current page, improves user awareness of location -->
+                <a href="product_page.html">Our Product</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <a class="icon" href="javascript:void(0);" onclick="myFunction()"> <!-- Hamburger menu icon (visible on smaller screens) -->
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        <a class="icon" href="javascript:void(0);" onclick="myFunction()"> <!-- Hamburger menu icon (visible on smaller screens) -->
-            <i class="fa fa-bars"></i>
-        </a>
     </div>
     <main> <!-- Main section of the page (helps structure the site properly for accessibility and SEO) -->
         <div class="main_content"> <!-- Main content wrapper (used for padding, layout, readability) -->

@@ -279,7 +279,7 @@ body{
   background-image: url("images/main_image.png"); 
 }
 .story_page{
-  background-image: url(images/muscle_man.jpg);
+  background-image: url(images/happy_people.png);
 }
 .product_page{
 
@@ -295,7 +295,7 @@ body{
     overflow: hidden;
     margin: 40px auto; /* centers content */
     padding: 30px;
-    background-color: #F7DCA1; /* light contrast against dark body */
+    background-color: rgba(247, 220, 161, 0.92); /* light contrast against dark body */
     backdrop-filter: blur(6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     border-radius: 8px;
