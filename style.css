@@ -1,6 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
 /* Imports custom fonts for typography consistency and branding */
+.parallax {
+	/* The image used */
+	background-image: url("images/good_ad.png");
 
+	/* Set a specific height */
+	min-height: 500px; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* perfect center */
+
+	text-align: center;
+
+	width: 90%; /* stops overflow on mobile */
+}
+
+.hero_text h1 {
+	color: #93C193;
+	font-size: 60px;
+	margin: 0;
+}
 .float_right {
 	margin: 0 20px 0 0px;
 	/* spacing from text */
@@ -604,6 +632,9 @@ p, li {
 }
 @media screen and (max-width: 400px) {
 	/* Applies final adjustments for very small phone screens */
+	.hero_text h1 {
+		font-size: 32px;
+	}
 	.topnav h1 {
 		font-size: 20px;
 		/* reduces title size so it fits */
