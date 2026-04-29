@@ -1,437 +1,617 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap'); /* Imports custom fonts for typography consistency and branding */
-.float_right{
-  margin: 0 20px 0 0px; /* spacing from text */
-  width: 270px; /* control size */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
+/* Imports custom fonts for typography consistency and branding */
+
+.float_right {
+	margin: 0 20px 0 0px;
+	/* spacing from text */
+	width: 270px;
+	/* control size */
 }
-.float_right:hover{
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
+.float_right:hover {
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+	/*responsive hover effect when hovering over the image*/
 }
-iframe{
-  display: block; /* removes inline spacing issues */
-  margin: 20px auto; /* centers iframe horizontally */
-  border-radius: 5px; /* softens edges for modern UI look */
+iframe {
+	display: block;
+	/* removes inline spacing issues */
+	margin: 20px auto;
+	/* centers iframe horizontally */
+	border-radius: 5px;
+	/* softens edges for modern UI look */
 }
 .contact_intro {
-  display: flex; /* enables flexible layout */
-  align-items: center; /* vertically aligns items */
-  gap: 30px; /* Creates consistent spacing between heading, text, and image for visual balance */
+	display: flex;
+	/* enables flexible layout */
+	align-items: center;
+	/* vertically aligns items */
+	gap: 30px;
+	/* Creates consistent spacing between heading, text, and image for visual balance */
 }
 .contact_intro h1, .contact_image {
-  flex: 1; /* allows heading to take proportional space, keeps image smaller so it supports content rather than dominating it */
+	flex: 1;
+	/* allows heading to take proportional space, keeps image smaller so it supports content rather than dominating it */
 }
 .contact_text {
-  flex: 2; /* Gives text more space than image to improve readability and hierarchy */
+	flex: 2;
+	/* Gives text more space than image to improve readability and hierarchy */
 }
-.contact_image img, .pop_up_image{
-  width: 100%; /* scales image within container */
+.contact_image img, .pop_up_image {
+	width: 100%;
+	/* scales image within container */
 }
-.contact_image img { /* Keeps image responsive while maintaining aspect ratio */
-  max-width: 300px; /* prevents oversized images */
-  height: auto; /* maintains aspect ratio */
-  border-radius: 10px; /* rounded corners for modern feel */
+.contact_image img {
+	/* Keeps image responsive while maintaining aspect ratio */
+	max-width: 300px;
+	/* prevents oversized images */
+	height: auto;
+	/* maintains aspect ratio */
+	border-radius: 10px;
+	/* rounded corners for modern feel */
 }
-.contact_image img:hover{
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
+.contact_image img:hover {
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+	/*responsive hover effect when hovering over the image*/
 }
-.pop_up_image { /*Modal for Gallery*/
-	position: fixed; /*The styling for the image container that pops up when clicked*/
-	left: 0; /*Positions the container at the center, using the top left cornor*/
-	background: rgba(0, 0, 0, 0.9); /*Makes the rest of the page dark*/
-	height: 100%; /*Makes the container take up the whole height and width*/
-	z-index: 100; /*Puts it in front of the other elemts*/
-	display: none; /*Doesn't show until the image is clicked on*/
+.pop_up_image {
+	/*Modal for Gallery*/
+	position: fixed;
+	/*The styling for the image container that pops up when clicked*/
+	left: 0;
+	/*Positions the container at the center, using the top left cornor*/
+	background: rgba(0, 0, 0, 0.9);
+	/*Makes the rest of the page dark*/
+	height: 100%;
+	/*Makes the container take up the whole height and width*/
+	z-index: 100;
+	/*Puts it in front of the other elemts*/
+	display: none;
+	/*Doesn't show until the image is clicked on*/
 }
-.pop_up_image, .pop_up_image span{
-  top: 0; /*Puts it near the top right corner, 10px from the right. Makes the image stay in the same place even when scrolling*/
+.pop_up_image, .pop_up_image span {
+	top: 0;
+	/*Puts it near the top right corner, 10px from the right. Makes the image stay in the same place even when scrolling*/
 }
-.pop_up_image span { /*Used to creat the close button X*/
-	position: absolute; /*Makes it possible to position using top and right*/
+.pop_up_image span {
+	/*Used to creat the close button X*/
+	position: absolute;
+	/*Makes it possible to position using top and right*/
 	right: 10px;
 	font-size: 40px;
-	font-weight: bolder; /*Makes it bold for easier visibility*/
+	font-weight: bolder;
+	/*Makes it bold for easier visibility*/
 	color: #FFFFFF;
-	cursor: pointer; /*Makes the cursor a pointer to tell the user it can be clicked on*/
-	z-index: 100; /*Puts it in front of the rest of the page*/
+	cursor: pointer;
+	/*Makes the cursor a pointer to tell the user it can be clicked on*/
+	z-index: 100;
+	/*Puts it in front of the rest of the page*/
 }
 .pop_up_image img {
-	position: absolute; /*Makes it so the image can be controlled using top and left*/
-	top: 50%; /*Puts it top left corner at the center*/
+	position: absolute;
+	/*Makes it so the image can be controlled using top and left*/
+	top: 50%;
+	/*Puts it top left corner at the center*/
 	left: 50%;
-	transform: translate(-50%, -50%); /*moves it so the middle point is at the center*/
-	border: 5px solid #fff; /* creates contrast against dark background */
-	border-radius: 5px; /* rounded corners for modern feel */
-	width: 750px; /* fixed size for desktop view */
-	object-fit: cover; /* Ensures images fill container without distortion (important for different screen sizes) */
+	transform: translate(-50%, -50%);
+	/*moves it so the middle point is at the center*/
+	border: 5px solid #fff;
+	/* creates contrast against dark background */
+	border-radius: 5px;
+	/* rounded corners for modern feel */
+	width: 750px;
+	/* fixed size for desktop view */
+	object-fit: cover;
+	/* Ensures images fill container without distortion (important for different screen sizes) */
 }
-.card img{
-  width: 50%; /* reduces image dominance inside card */
-  height: auto;
+.card img {
+	width: 50%;
+	/* reduces image dominance inside card */
+	height: auto;
 }
-.card img:hover{ /*this will change the opacity of my card images*/
-  opacity: 50%; /* creates fade effect on hover for interactivity */
+.card img:hover {
+	/*this will change the opacity of my card images*/
+	opacity: 50%;
+	/* creates fade effect on hover for interactivity */
 }
 * {
-  box-sizing: border-box; /* Ensures padding and borders are included in total width/height, prevents layout breaking on smaller screens */
+	box-sizing: border-box;
+	/* Ensures padding and borders are included in total width/height, prevents layout breaking on smaller screens */
 }
-.column { /* Float four columns side by side */
-  float: left; /* creates horizontal layout */
-  width: 25%; /* ensures 4 equal columns */
-  padding: 0 10px;
+.column {
+	/* Float four columns side by side */
+	float: left;
+	/* creates horizontal layout */
+	width: 25%;
+	/* ensures 4 equal columns */
+	padding: 0 10px;
 }
-.row {margin: 0 -5px;} /* Remove extra left and right margins, due to padding in columns */
-.row:after { /* Clear floats after the columns */
-  content: "";
-  display: table;
-  clear: both; /* prevents layout collapsing due to floats */
+.row {
+	margin: 0 -5px;
 }
-.card { /* Style the counter cards */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
+/* Remove extra left and right margins, due to padding in columns */
+
+.row:after {
+	/* Clear floats after the columns */
+	content: "";
+	display: table;
+	clear: both;
+	/* prevents layout collapsing due to floats */
 }
-.nav-links, .float_right{
-  float: right; /* pushes navigation links to the right side of navbar, helps separate branding (left) from navigation (right) */
+.card {
+	/* Style the counter cards */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	/* this adds the "card" effect */
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
 }
-small{
-    display: block; /* forces small text onto its own line */ 
-    margin-top: 15px; /* adds spacing above for readability */
+.nav-links, .float_right {
+	float: right;
+	/* pushes navigation links to the right side of navbar, helps separate branding (left) from navigation (right) */
 }
-footer{
-  background-color: #941a27; /* strong brand colour for footer */
-  font-size: 18px;
-  padding: 3%; /* responsive spacing */
-  color: white; /* high contrast for accessibility */
-  font-family: "Inter", sans-serif; /* This is imported from Google Fonts */
-  text-align: center; /* centers all footer content */
-  margin-top: 0; 
-  flex-grow: 1; /* Tells the footer to stretch to the bottom of the screen */
+small {
+	display: block;
+	/* forces small text onto its own line */
+	margin-top: 15px;
+	/* adds spacing above for readability */
+}
+footer {
+	background-color: #941a27;
+	/* strong brand colour for footer */
+	font-size: 18px;
+	padding: 3%;
+	/* responsive spacing */
+	color: white;
+	/* high contrast for accessibility */
+	font-family: "Inter", sans-serif;
+	/* This is imported from Google Fonts */
+	text-align: center;
+	/* centers all footer content */
+	margin-top: 0;
+	flex-grow: 1;
+	/* Tells the footer to stretch to the bottom of the screen */
 }
 footer img {
-  width: 32px; /* consistent icon sizing */
-  height: 32px;
-  margin-top: 10px; /* spacing from text above */
+	width: 32px;
+	/* consistent icon sizing */
+	height: 32px;
+	margin-top: 10px;
+	/* spacing from text above */
 }
-footer .left_anchor{ /* Furthest left anchor has 10% margin left to line up with main content */
-  margin-left: 8%; /* aligns with main content width visually */
+footer .left_anchor {
+	/* Furthest left anchor has 10% margin left to line up with main content */
+	margin-left: 8%;
+	/* aligns with main content width visually */
 }
-footer .right{ /* Furthest right anchor has 10% margin left to line up */
-  margin-right: 8%; /* keeps symmetry across layout */
+footer .right {
+	/* Furthest right anchor has 10% margin left to line up */
+	margin-right: 8%;
+	/* keeps symmetry across layout */
 }
-footer a{
-  color: #f2f2f2; /* readable light colour */
-  display: inline-block; /* allows padding & transforms */
-  text-decoration: none;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  margin: 0 15px; /* adds space left & right of each link */
-  padding: 8px 14px; /* increases clickable area */
-  border-radius: 10px; /* rounded corners for modern feel */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+footer a {
+	color: #f2f2f2;
+	/* readable light colour */
+	display: inline-block;
+	/* allows padding & transforms */
+	text-decoration: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	margin: 0 15px;
+	/* adds space left & right of each link */
+	padding: 8px 14px;
+	/* increases clickable area */
+	border-radius: 10px;
+	/* rounded corners for modern feel */
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-footer p{
-  font-size: 18px;
-  margin-left: 8%; /* aligns text with left anchor */
+footer p {
+	font-size: 18px;
+	margin-left: 8%;
+	/* aligns text with left anchor */
 }
 footer a:hover {
-  background-color: rgba(255,255,255,0.12); /* subtle hover feedback */
-  color: #F7DCA1; /* highlights interaction */
-  transform: translateY(-2px); /* gives lift effect */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	background-color: rgba(255, 255, 255, 0.12);
+	/* subtle hover feedback */
+	color: #F7DCA1;
+	/* highlights interaction */
+	transform: translateY(-2px);
+	/* gives lift effect */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 footer a.active {
-  background-color: #C87620; /* indicates current page */
-  color: white;
+	background-color: #C87620;
+	/* indicates current page */
+	color: white;
 }
-footer a.active:hover{
-  background-color: #d88935; /* slightly lighter for hover feedback */
-  color: white;
+footer a.active:hover {
+	background-color: #d88935;
+	/* slightly lighter for hover feedback */
+	color: white;
 }
 .topnav {
-  position: relative;
-  overflow: hidden; /* Prevents child elements from spilling outside navbar */
-  background-color: #941a27;
-  transition: box-shadow 0.35s ease, background-color 0.35s ease; /* smooth visual feedback */
+	position: relative;
+	overflow: hidden;
+	/* Prevents child elements from spilling outside navbar */
+	background-color: #941a27;
+	transition: box-shadow 0.35s ease, background-color 0.35s ease;
+	/* smooth visual feedback */
 }
-.topnav:hover{
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+.topnav:hover {
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
-.topnav h1{
-  margin: 0;
-  line-height: 60px; /* vertically aligns with navbar height */
-  font-size: 32px;
-  display: inline-block;
-  color: wheat;
-  margin-left: -10px;
-  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+.topnav h1 {
+	margin: 0;
+	line-height: 60px;
+	/* vertically aligns with navbar height */
+	font-size: 32px;
+	display: inline-block;
+	color: wheat;
+	margin-left: -10px;
+	transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
 }
-.topnav:hover h1{
-  transform: translateY(-1px); /* subtle lift effect */
-  text-shadow: 0 0 10px rgba(200, 118, 32, 0.5); /* glow effect */
+.topnav:hover h1 {
+	transform: translateY(-1px);
+	/* subtle lift effect */
+	text-shadow: 0 0 10px rgba(200, 118, 32, 0.5);
+	/* glow effect */
 }
-.topnav img{/*styling for the logo on the left of navbar*/
-    float: left;
-    height: 60px; /* matches navbar height */
-    margin: 0;
-    transition: transform 0.3s ease, filter 0.3s ease;
+.topnav img {
+	/*styling for the logo on the left of navbar*/
+	float: left;
+	height: 60px;
+	/* matches navbar height */
+	margin: 0;
+	transition: transform 0.3s ease, filter 0.3s ease;
 }
 .nav_inner {
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden; /* keeps floats contained */
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	/* keeps floats contained */
 }
-.topnav img:hover{
-  transform: scale(1.05); /* slight zoom for interaction */
-  filter: brightness(1.08); /* makes logo pop slightly */
+.topnav img:hover {
+	transform: scale(1.05);
+	/* slight zoom for interaction */
+	filter: brightness(1.08);
+	/* makes logo pop slightly */
 }
 .topnav a {
-  float: left;
-  display: block;
-  height: 60px;
-  line-height: 60px; /* vertical centering */
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin-right: 15px;
-  font-family: "Inter", sans-serif; /* This is imported from Google Fonts */
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease, transform 0.25s ease, background-color 0.3s ease;
+	float: left;
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	/* vertical centering */
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0 16px;
+	text-decoration: none;
+	font-size: 17px;
+	margin-right: 15px;
+	font-family: "Inter", sans-serif;
+	/* This is imported from Google Fonts */
+	position: relative;
+	overflow: hidden;
+	transition: color 0.3s ease, transform 0.25s ease, background-color 0.3s ease;
 }
 .topnav a::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 10px;
-  height: 3px;
-  background-color: #F7DCA1;
-  transform: scaleX(0); /* Hidden underline effect that animates on hover */
-  transform-origin: center;
-  transition: transform 0.3s ease;
-  border-radius: 999px; /* smooth rounded underline */
+	content: "";
+	position: absolute;
+	left: 16px;
+	right: 16px;
+	bottom: 10px;
+	height: 3px;
+	background-color: #F7DCA1;
+	transform: scaleX(0);
+	/* Hidden underline effect that animates on hover */
+	transform-origin: center;
+	transition: transform 0.3s ease;
+	border-radius: 999px;
+	/* smooth rounded underline */
 }
 .topnav a:hover {
-  color: #F7DCA1;
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px); /* consistent hover lift */
+	color: #F7DCA1;
+	background-color: rgba(255, 255, 255, 0.08);
+	transform: translateY(-2px);
+	/* consistent hover lift */
 }
 .topnav a:hover::after {
-  transform: scaleX(1); /* Smooth hover animation improves user experience and visual feedback */
+	transform: scaleX(1);
+	/* Smooth hover animation improves user experience and visual feedback */
 }
 .topnav a.active {
-  background-color: #C87620;
-  color: white;
+	background-color: #C87620;
+	color: white;
 }
 .topnav a.active::after {
-  background-color: white;
-  transform: scaleX(1); /* keeps underline visible on active page */
+	background-color: white;
+	transform: scaleX(1);
+	/* keeps underline visible on active page */
 }
-.topnav a.active:hover{
-  background-color: #d88935;
-  color: white;
+.topnav a.active:hover {
+	background-color: #d88935;
+	color: white;
 }
 .topnav .icon {
-  display: none; /* Hidden by default, only shown in mobile view via media query */
+	display: none;
+	/* Hidden by default, only shown in mobile view via media query */
 }
 .topnav a.icon {
-  border-radius: 10px;
-  transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+	border-radius: 10px;
+	transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .topnav a.icon:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  transform: scale(1.08);
-  box-shadow: 0 0 0 4px rgba(255,255,255,0.08);
-  animation: pulseHamburger 1.2s infinite; /* draws attention to menu */
+	background-color: rgba(255, 255, 255, 0.12);
+	transform: scale(1.08);
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+	animation: pulseHamburger 1.2s infinite;
+	/* draws attention to menu */
 }
 .topnav a.icon::after {
-  display: none; /* removes underline animation from icon */
+	display: none;
+	/* removes underline animation from icon */
 }
 @keyframes pulseHamburger {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1); /* grows slightly */
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+		/* grows slightly */
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 html, body {
-  margin: 0;
-  padding: 0; /* removes browser default spacing */
+	margin: 0;
+	padding: 0;
+	/* removes browser default spacing */
 }
-body{
-  background-size: cover; /* fills screen */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* gives nice depth/parallax feel */
-  display: flex;
-  flex-direction: column; /* enables sticky footer layout */
-  min-height: 100vh; /* ensures full screen height */
+body {
+	background-size: cover;
+	/* fills screen */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* gives nice depth/parallax feel */
+	display: flex;
+	flex-direction: column;
+	/* enables sticky footer layout */
+	min-height: 100vh;
+	/* ensures full screen height */
 }
-.home_page{
-  background-image: url("images/main_image.png"); 
+.home_page {
+	background-image: url("images/main_image.png");
 }
-.story_page{
-  background-image: url(images/happy_people.png);
+.story_page {
+	background-image: url(images/happy_people.png);
 }
-.product_page{
-
+.product_page {
+	background-image: url(images/fast_car.png);
 }
-.contact_page{
-
+.contact_page {
+	background-image: url(images/muscle_man.jpg);
 }
-.main_content{
-    width: 80%;
-    max-width: 1000px; /* prevents overly wide content */
-    text-align: left;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 40px auto; /* centers content */
-    padding: 30px;
-    background-color: rgba(247, 220, 161, 0.92); /* light contrast against dark body */
-    backdrop-filter: blur(6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+.main_content {
+	width: 80%;
+	max-width: 1000px;
+	/* prevents overly wide content */
+	text-align: left;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 40px auto;
+	/* centers content */
+	padding: 30px;
+	background-color: rgba(247, 220, 161, 0.92);
+	/* light contrast against dark body */
+	backdrop-filter: blur(6px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+	border-radius: 8px;
+	transition: all 0.3s ease;
 }
-.main_content:hover{
-  transform: translateY(-3px); /* subtle hover elevation */
+.main_content:hover {
+	transform: translateY(-3px);
+	/* subtle hover elevation */
 }
-.nav_bar_title{
-  margin-left: 10px;
-  text-shadow: none;
-  float: left; /* keeps title aligned left */
+.nav_bar_title {
+	margin-left: 10px;
+	text-shadow: none;
+	float: left;
+	/* keeps title aligned left */
 }
-h1{
-    font-family: Archivo Black;
-    color: #5E121F;
-    text-shadow: 0 0 5px #C87620;
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
+h1 {
+	font-family: "Archivo Black";
+	color: #5E121F;
+	text-shadow: 0 0 5px #C87620;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
-p,li{
-    font: 300 16px Inter;
-    color: #2b0910; /* readable dark text */
+p, li {
+	font: 300 16px Inter;
+	color: #2b0910;
+	/* readable dark text */
 }
-@media screen and (max-width:1050px){ /* Applies these layout changes on tablets and smaller screens */
-  .topnav h1{
-    margin-left: 15px; /* moves title slightly right for better mobile spacing */
-    transition: all 0.3s ease; /* keeps movement smooth when layout changes */
-  }
-  .topnav > a:first-child {
-    display: inline-flex; /* keeps logo/link neatly aligned */
-    align-items: center; /* vertically centers logo */
-    height: auto; /* allows height to adjust naturally */
-    line-height: normal; /* prevents forced navbar line-height issues */
-    padding: 0; /* removes extra spacing around logo */
-    margin: 0; /* removes default spacing */
-    width: fit-content; /* makes clickable area only as wide as the content */
-  }
-  .topnav.responsive h1:first-of-type{
-    margin-bottom: -60px; /* helps keep title positioned correctly when menu opens */
-  }
-  .topnav.responsive .nav_bar_title{
-    margin-left: 15px; /* keeps title aligned with mobile menu spacing */
-  }
-  .contact_intro {
-    display: flex;
-    flex-direction: column; /* Stacks elements vertically for better usability on smaller screens */
-    text-align: center; /* Centers content to match mobile viewing habits */
-  }
-  .contact_text {
-    display: contents; /* Allows child elements (h1, p) to be reordered independently */
-  }
-  .contact_text h1 {
-    order: 1; /* heading first, makes the page title appear before image and text */
-  }
-  .contact_image {
-    order: 2; /* image second, places image under heading for mobile readability */
-    width: 100%; /* allows image area to fill screen width */
-  }
-  .contact_image img {
-    width: 100%; /* makes image responsive */
-    max-width: 100%; /* prevents image overflowing container */
-    height: auto; /* keeps image proportions correct */
-    transition: all 0.3s ease; /* smooths hover or layout changes */
-  }
-  .contact_image img:hover{
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /*responsive hover effect when hovering over the image*/
-  }
-  .contact_text p {
-    order: 3; /* paragraph last, keeps written content below image */
-  }
-  .pop_up_image img{
-    width: 80%; /* makes gallery pop-up image fit smaller screens */
-  }
-  .card img{
-    width: 100%; /* makes card images fill the card on mobile */
-  }
-  .column {
-    width: 100%; /* changes columns into full-width rows */
-    display: block; /* stacks each column vertically */
-    margin-bottom: 20px; /* adds spacing between stacked cards */
-  }
-  .nav-links{
-    display: none; /* adds spacing between stacked cards */
-  }
-  .topnav{
-    position: relative; /* allows hamburger icon to be positioned inside navbar */
-  }
-  .topnav.responsive .nav-links {
-    display: block; /* JavaScript toggles this class to show/hide menu on small screens */
-    width: 100%; /* makes opened menu use full width */
-    margin-top: 70px; /* pushes menu BELOW navbar */
-  }
-  .topnav.responsive .nav-links a, .topnav.responsive .nav-links{
-    display: block; /* stacks mobile menu links vertically */
-  }
-  .topnav a:not(:first-child) {display: none;} /* Hides navigation links on small screens to reduce clutter */
-  .topnav a.icon {
-    display: block; /* shows hamburger icon on smaller screens */
-    position: absolute; /* places icon independently in navbar */
-    top: -10px; /* adjusts vertical position */
-    right: 0px; /* places icon on the right */
-    float: none; /* stops desktop float from affecting mobile layout */
-    margin-right: 0;
-    padding: 12px 14px; /* creates a comfortable clickable area */
-  }
-  .topnav.responsive {position: relative;} /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  .topnav.responsive a.icon {
-    position: absolute; /* keeps hamburger fixed in top-right while menu is open */
-    right: 0px;
-    top: -10px;
-  }
-  .topnav.responsive a {
-    float: none; /* removes desktop horizontal layout */
-    display: block; /* stacks links vertically */
-    text-align: left; /* aligns mobile menu links to the left */
-  }
-  .main_content{
-      width: 95%; /* gives content more space on small screens */
-      transition: all 0.3s ease; /* smooths resizing changes */
-  }
+@media screen and (max-width:1050px) {
+	/* Applies these layout changes on tablets and smaller screens */
+	.nav_inner {
+		width: 95%;
+		/* matches mobile .main_content */
+		max-width: 1000px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.topnav h1 {
+		margin-left: 15px;
+		/* moves title slightly right for better mobile spacing */
+		transition: all 0.3s ease;
+		/* keeps movement smooth when layout changes */
+	}
+	.nav_inner>a:first-child {
+		display: inline-flex;
+		/* keeps logo/link neatly aligned */
+		align-items: center;
+		/* vertically centers logo */
+		height: auto;
+		/* allows height to adjust naturally */
+		line-height: normal;
+		/* prevents forced navbar line-height issues */
+		padding: 0;
+		/* removes extra spacing around logo */
+		margin: 0;
+		/* removes default spacing */
+		width: fit-content;
+		/* makes clickable area only as wide as the content */
+	}
+	.topnav.responsive h1:first-of-type {
+		margin-bottom: -60px;
+		/* helps keep title positioned correctly when menu opens */
+	}
+	.topnav.responsive .nav_bar_title {
+		margin-left: 15px;
+		/* keeps title aligned with mobile menu spacing */
+	}
+	.contact_intro {
+		display: flex;
+		flex-direction: column;
+		/* Stacks elements vertically for better usability on smaller screens */
+		text-align: center;
+		/* Centers content to match mobile viewing habits */
+	}
+	.contact_text {
+		display: contents;
+		/* Allows child elements (h1, p) to be reordered independently */
+	}
+	.contact_text h1 {
+		order: 1;
+		/* heading first, makes the page title appear before image and text */
+	}
+	.contact_image {
+		order: 2;
+		/* image second, places image under heading for mobile readability */
+		width: 100%;
+		/* allows image area to fill screen width */
+	}
+	.contact_image img {
+		width: 100%;
+		/* makes image responsive */
+		max-width: 100%;
+		/* prevents image overflowing container */
+		height: auto;
+		/* keeps image proportions correct */
+		transition: all 0.3s ease;
+		/* smooths hover or layout changes */
+	}
+	.contact_image img:hover {
+		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+		/*responsive hover effect when hovering over the image*/
+	}
+	.contact_text p {
+		order: 3;
+		/* paragraph last, keeps written content below image */
+	}
+	.pop_up_image img {
+		width: 80%;
+		/* makes gallery pop-up image fit smaller screens */
+	}
+	.card img {
+		width: 100%;
+		/* makes card images fill the card on mobile */
+	}
+	.column {
+		width: 100%;
+		/* changes columns into full-width rows */
+		display: block;
+		/* stacks each column vertically */
+		margin-bottom: 20px;
+		/* adds spacing between stacked cards */
+	}
+	.nav-links {
+		display: none;
+		/* adds spacing between stacked cards */
+	}
+	.topnav {
+		position: relative;
+		/* allows hamburger icon to be positioned inside navbar */
+	}
+	.topnav.responsive .nav-links {
+		display: block;
+		/* JavaScript toggles this class to show/hide menu on small screens */
+		width: 100%;
+		/* makes opened menu use full width */
+		margin-top: 70px;
+		/* pushes menu BELOW navbar */
+	}
+	.topnav.responsive .nav-links a, .topnav.responsive .nav-links {
+		display: block;
+		/* stacks mobile menu links vertically */
+	}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	/* Hides navigation links on small screens to reduce clutter */
+	.topnav a.icon {
+		display: block;
+		/* shows hamburger icon on smaller screens */
+		position: absolute;
+		/* places icon independently in navbar */
+		top: -10px;
+		/* adjusts vertical position */
+		right: 0px;
+		/* places icon on the right */
+		float: none;
+		/* stops desktop float from affecting mobile layout */
+		margin-right: 0;
+		padding: 12px 14px;
+		/* creates a comfortable clickable area */
+	}
+	.topnav.responsive {
+		position: relative;
+	}
+	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+	.topnav.responsive a.icon {
+		position: absolute;
+		/* keeps hamburger fixed in top-right while menu is open */
+		right: 0px;
+		top: -10px;
+	}
+	.topnav.responsive a {
+		float: none;
+		/* removes desktop horizontal layout */
+		display: block;
+		/* stacks links vertically */
+		text-align: left;
+		/* aligns mobile menu links to the left */
+	}
+	.main_content {
+		width: 95%;
+		/* gives content more space on small screens */
+		transition: all 0.3s ease;
+		/* smooths resizing changes */
+	}
 }
-@media screen and (max-width: 650px){ /* Applies extra adjustments for smaller phones/tablets */
-  .float_right{
-    float: none; /* remove floating, stops text wrapping awkwardly around image */     
-    width: 100%; /* full width */
-    margin: 10px 0 10px 0; /* spacing below image */
-  }
+@media screen and (max-width: 650px) {
+	/* Applies extra adjustments for smaller phones/tablets */
+	.float_right {
+		float: none;
+		/* remove floating, stops text wrapping awkwardly around image */
+		width: 100%;
+		/* full width */
+		margin: 10px 0 10px 0;
+		/* spacing below image */
+	}
 }
-@media screen and (max-width: 400px){ /* Applies final adjustments for very small phone screens */
-  .topnav h1{
-    font-size: 20px; /* reduces title size so it fits */
-    line-height: 50px; /* keeps title vertically aligned */
-    margin-left: -10px; /* adjusts title position on narrow screens */
-    margin-top: 3px; /* fine-tunes vertical spacing */
-    transition: all 0.3s ease; /* keeps title movement smooth */
-  }
-} 
+@media screen and (max-width: 400px) {
+	/* Applies final adjustments for very small phone screens */
+	.topnav h1 {
+		font-size: 20px;
+		/* reduces title size so it fits */
+		line-height: 50px;
+		/* keeps title vertically aligned */
+		margin-top: 3px;
+		/* fine-tunes vertical spacing */
+		transition: all 0.3s ease;
+		/* keeps title movement smooth */
+	}
+}

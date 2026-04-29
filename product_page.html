@@ -1,59 +1,57 @@
-<!DOCTYPE html> <!-- Declares the document type and verison of HTML (HTML5) -->
-<html lang="en"> <!-- the primary human language of the web page's content is English -->
+<!DOCTYPE html>
+<!-- Declares the document type and verison of HTML (HTML5) -->
+<html lang="en">
+<!-- the primary human language of the web page's content is English -->
 <head>
-    <meta charset="UTF-8"> <!-- Ensures proper character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Makes site responsive on all devices -->
-    <meta name="description" content="Explore Kiwi Cakes protein pancake mix. A quick, affordable, high-protein meal designed for gymgoers, students, and active lifestyles."> <!-- Helps SEO and search engine previews -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Icons (hamburger menu etc.) -->
-    <link rel="stylesheet" href="style.css"> <!-- Main custom styling -->
-    <link rel="stylesheet" href="normalize.css"> <!-- Resets browser default styles for consistency -->
-    <script src="responsive_nav.js"></script> <!-- JavaScript for responsive navigation -->
-    <title>Our Product | Kiwi Cakes High-Protein Pancake Mix</title> <!-- Page title shown in browser tab -->
+	<meta charset="UTF-8"><!-- Ensures proper character encoding -->
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- Makes site responsive on all devices -->
+	<meta content="Explore Kiwi Cakes protein pancake mix. A quick, affordable, high-protein meal designed for gymgoers, students, and active lifestyles." name="description"><!-- Helps SEO and search engine previews -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Icons (hamburger menu etc.) -->
+	<link href="style.css" rel="stylesheet"><!-- Main custom styling -->
+	<link href="normalize.css" rel="stylesheet"><!-- Resets browser default styles for consistency -->
+
+	<script src="responsive_nav.js">
+	</script><!-- JavaScript for responsive navigation -->
+	<title>Our Product | Kiwi Cakes High-Protein Pancake Mix</title><!-- Page title shown in browser tab -->
 </head>
-<body> <!-- Contains all visible page content -->  
-    <div class="topnav" id="myTopnav"> <!-- Navigation bar -->
-        <a href="index.html"><img src="images/new_kiwicake_logo.png" alt="Kiwi Cake Home"></a> <!-- Logo links back to homepage -->
-        <h1 class="nav_bar_title">Kiwi Cakes</h1> <!-- Website title in navbar -->
-        <div class="nav-links"> <!-- Navigation links -->
-            <a href="index.html">Home</a>
-            <a href="our_story.html">Our Story</a>
-            <a href="product_page.html" class="active">Our Product</a> <!-- active class highlights current page, improves user awareness of location -->
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <a class="icon" href="javascript:void(0);" onclick="myFunction()"> <!-- Hamburger menu icon (visible on smaller screens) -->
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    <div class="main_content">
-        <h1>Product Information:</h1> <!-- Main heading for the product page -->
-        <p>Our Kiwi Cakes pancake mix is designed specifically for active individuals who want a quick, high-protein meal without sacrificing taste. Each pack contains 4–5 servings, with approximately 5 pancakes per serving. A scoop is included to ensure accurate portioning every time.</p>
-        <p>Preparation is simple and efficient: just add one scoop to a bowl, mix with water or milk, whisk until smooth, and cook. This makes Kiwi Cakes perfect for busy mornings, post-workout meals, or convenient snacks throughout the day.</p>
-        <img src="images/juicy_pancake.jpg" class="float_right">
-        <p>Our Ingredients (per serving):</p>
-        <ul>
-            <li>Oat Flour</li>
-            <li>Whey Protein Isolate</li>
-            <li>Egg White Powder</li>
-            <li>Buttermilk Powder</li>
-            <li>Coconut Sugar</li>
-            <li>Baking Powder</li>
-            <li>Pinch Sea Salt</li>
-            <li>Cinnamon</li>
-        </ul>
-        <p>We prioritise transparency in our nutritional information to help customers make informed decisions. Clear labelling and allergy information are provided to ensure consumer safety.</p>
-    </div>
-<footer> <!-- Footer section, contains secondary navigation and branding -->
-    <a href="index.html">Home</a> |
-    <a href="our_story.html">Our Story</a> |
-    <a href="product_page.html" class="active">Our Product</a> |
-    <a href="contact.html">Contact Us</a>
-    <small>©2026 Copyright, All Rights Reserved</small> <!-- legal information -->
-    <a href="https://www.instagram.com/kiwi.cakes.obhs/" target="_blank"> <!-- social media link -->
-        <img src="/images/instagram_logo.svg" alt="instragram logo">
-    </a>
-    <a href="https://www.youtube.com/channel/UCoPKYkIYiv6hY9eaYTZz3-Q" target="_blank"> <!-- second social platform -->
-        <img src="/images/youtube_logo.svg" alt="youtube logo">
-    </a>
-</footer>
+<body class="product_page">
+	<!-- Contains all visible page content -->
+	<div class="topnav" id="myTopnav">
+		<!-- Navigation bar -->
+		<div class="nav_inner">
+			<a href="index.html"><img alt="Kiwi Cake Home" src="images/new_kiwicake_logo.png"></a> <!-- Logo links back to homepage -->
+			<h1 class="nav_bar_title">Kiwi Cakes</h1><!-- Website title in navbar -->
+			<div class="nav-links">
+				<!-- Navigation links -->
+				<a href="index.html">Home</a> <a href="our_story.html">Our Story</a> <a class="active" href="product_page.html">Our Product</a> <!-- active class highlights current page, improves user awareness of location -->
+				 <a href="contact.html">Contact Us</a>
+			</div><a class="icon" href="javascript:void(0);" onclick="myFunction()"><!-- Hamburger menu icon (visible on smaller screens) -->
+			 <i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+	<div class="main_content">
+		<h1>Product Information:</h1><!-- Main heading for the product page -->
+		<p>Our Kiwi Cakes pancake mix is designed specifically for active individuals who want a quick, high-protein meal without sacrificing taste. Each pack contains 4–5 servings, with approximately 5 pancakes per serving. A scoop is included to ensure accurate portioning every time.</p>
+		<p>Preparation is simple and efficient: just add one scoop to a bowl, mix with water or milk, whisk until smooth, and cook. This makes Kiwi Cakes perfect for busy mornings, post-workout meals, or convenient snacks throughout the day.</p><img class="float_right" src="images/juicy_pancake.jpg" alt="Stack of pancakes with syrup">
+		<p>Our Ingredients (per serving):</p>
+		<ul>
+			<li>Oat Flour</li>
+			<li>Whey Protein Isolate</li>
+			<li>Egg White Powder</li>
+			<li>Buttermilk Powder</li>
+			<li>Coconut Sugar</li>
+			<li>Baking Powder</li>
+			<li>Pinch Sea Salt</li>
+			<li>Cinnamon</li>
+		</ul>
+		<p>We prioritise transparency in our nutritional information to help customers make informed decisions. Clear labelling and allergy information are provided to ensure consumer safety.</p>
+	</div>
+	<footer>
+		<!-- Footer section, contains secondary navigation and branding -->
+		<a href="index.html">Home</a> | <a href="our_story.html">Our Story</a> | <a class="active" href="product_page.html">Our Product</a> | <a href="contact.html">Contact Us</a> <small>©2026 Copyright, All Rights Reserved</small> <!-- legal information -->
+		 <a href="https://www.instagram.com/kiwi.cakes.obhs/" target="_blank"><!-- social media link -->
+		 <img alt="instragram logo" src="/images/instagram_logo.svg"></a> <a href="https://www.youtube.com/channel/UCoPKYkIYiv6hY9eaYTZz3-Q" target="_blank"><!-- second social platform -->
+		 <img alt="youtube logo" src="/images/youtube_logo.svg"></a>
+	</footer>
 </body>
 </html>
