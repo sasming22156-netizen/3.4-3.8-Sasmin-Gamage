@@ -222,7 +222,6 @@ footer a {
 	/* allows padding & transforms */
 	text-decoration: none;
 	text-align: center;
-	text-decoration: none;
 	font-size: 17px;
 	margin: 0 15px;
 	/* adds space left & right of each link */
@@ -425,7 +424,7 @@ body {
 	width: 80%;
 	max-width: 1000px;
 	/* prevents overly wide content */
-	text-align: left;
+	text-align: justify;
 	box-sizing: border-box;
 	overflow: hidden;
 	margin: 40px auto;
@@ -448,13 +447,17 @@ body {
 	float: left;
 	/* keeps title aligned left */
 }
-h1 {
+h1, h2{
 	font-family: "Archivo Black";
 	color: #5E121F;
 	text-shadow: 0 0 5px #C87620;
+}
+h2{
+	margin: 35px 0;
+}
+h1 {
 	text-align: center;
-	margin-bottom: 40px;
-	margin-top: 40px;
+	margin: 40px 0;
 }
 p, li {
 	font: 300 16px Inter;
@@ -462,6 +465,22 @@ p, li {
 	/* readable dark text */
 }
 @media screen and (max-width:1050px) {
+	.parallax {
+		position: relative;
+		min-height: 500px;
+	}
+	.hero_text {
+		position: absolute;
+		top: 62%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+	}
+	.hero_text h1 {
+		font-size: clamp(32px, 11vw, 46px);
+		line-height: 1.05;
+		margin: 0;
+	}
 	/* Applies these layout changes on tablets and smaller screens */
 	.nav_inner {
 		width: 95%;
@@ -493,7 +512,7 @@ p, li {
 		/* makes clickable area only as wide as the content */
 	}
 	.topnav.responsive h1:first-of-type {
-		margin-bottom: -60px;
+		margin-bottom: 0;
 		/* helps keep title positioned correctly when menu opens */
 	}
 	.topnav.responsive .nav_bar_title {
@@ -556,20 +575,30 @@ p, li {
 		/* adds spacing between stacked cards */
 	}
 	.nav-links {
+		overflow: visible;
 		display: none;
 		/* adds spacing between stacked cards */
 	}
 	.topnav {
-		position: relative;
-		/* allows hamburger icon to be positioned inside navbar */
+		overflow: visible;
 	}
 	.topnav.responsive .nav-links {
 		display: block;
 		/* JavaScript toggles this class to show/hide menu on small screens */
 		width: 100%;
 		/* makes opened menu use full width */
-		margin-top: 70px;
+		margin-top: 20px;
 		/* pushes menu BELOW navbar */
+		clear: both;
+	}
+	.topnav.responsive .nav-links a {
+		display: block;
+		width: 100%;
+		height: auto;
+		line-height: 1.4;
+		padding: 16px 20px;
+		margin: 0;
+		text-align: left;
 	}
 	.topnav.responsive .nav-links a, .topnav.responsive .nav-links {
 		display: block;
@@ -586,7 +615,7 @@ p, li {
 		/* places icon independently in navbar */
 		top: -10px;
 		/* adjusts vertical position */
-		right: 0px;
+		right: 0;
 		/* places icon on the right */
 		float: none;
 		/* stops desktop float from affecting mobile layout */
