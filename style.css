@@ -450,7 +450,7 @@ body {
 	float: left;
 	/* keeps title aligned left */
 }
-h1, h2{
+h1, h2, h3{
 	font-family: "Archivo Black";
 	color: #5E121F;
 	text-shadow: 0 0 5px #C87620;
