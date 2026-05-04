@@ -1,33 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
 /* Imports custom fonts for typography consistency and branding */
+.parallax, body{
+	/* fills screen, create the parallax scrolling effect */ 
+	background: center / cover no-repeat fixed;
+}
 .parallax {
 	/* The image used */
 	background-image: url("images/good_ad.png");
 
 	/* Set a specific height */
 	min-height: 500px; 
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+}
+.hero_text, .pop_up_image span, .pop_up_image img, .topnav a::after {
+	position: absolute;
+}
+.hero_text, .pop_up_image img {
+	inset: 50% auto auto 50%;
+	/*Makes it so the image can be controlled using top and left*/
 }
 .hero_text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
 	transform: translate(-50%, -50%); /* perfect center */
 
-	text-align: center;
-
 	width: 90%; /* stops overflow on mobile */
+}
+
+.hero_text, .card, footer, footer a, .topnav a, h1{
+	text-align: center;
+}
+
+.hero_text h1, .topnav h1, .topnav img, html, body{
+	margin: 0;
+	/* matches navbar height */
 }
 
 .hero_text h1 {
 	color: #93C193;
 	font-size: 60px;
-	margin: 0;
 }
 .float_right {
 	margin: 0 20px 0 0px;
@@ -35,21 +43,28 @@
 	width: 270px;
 	/* control size */
 }
-.float_right:hover {
+.float_right:hover, .contact_image img:hover {
 	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 	/*responsive hover effect when hovering over the image*/
 }
-iframe {
+iframe, .pop_up_image img, small, .topnav a {
 	display: block;
-	/* removes inline spacing issues */
+	/* forces content onto its own line, removes inline spacing issues */
+}
+iframe, .pop_up_image img {
 	margin: 20px auto;
 	/* centers iframe horizontally */
+}
+
+iframe, .pop_up_image img {
 	border-radius: 5px;
 	/* softens edges for modern UI look */
 }
-.contact_intro {
-	display: flex;
+.contact_intro, body{
+	display: flex;	
 	/* enables flexible layout */
+}
+.contact_intro {
 	align-items: center;
 	/* vertically aligns items */
 	gap: 30px;
@@ -63,7 +78,7 @@ iframe {
 	flex: 2;
 	/* Gives text more space than image to improve readability and hierarchy */
 }
-.contact_image img, .pop_up_image {
+.contact_image img, .pop_up_image, .card img {
 	width: 100%;
 	/* scales image within container */
 }
@@ -73,12 +88,10 @@ iframe {
 	/* prevents oversized images */
 	height: auto;
 	/* maintains aspect ratio */
+}
+.contact_image img, footer a, .topnav a.icon {
 	border-radius: 10px;
 	/* rounded corners for modern feel */
-}
-.contact_image img:hover {
-	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-	/*responsive hover effect when hovering over the image*/
 }
 .pop_up_image {
 	/*Modal for Gallery*/
@@ -90,59 +103,47 @@ iframe {
 	/*Makes the rest of the page dark*/
 	height: 100%;
 	/*Makes the container take up the whole height and width*/
-	z-index: 100;
-	/*Puts it in front of the other elemts*/
-	display: none;
-	/*Doesn't show until the image is clicked on*/
 }
 .pop_up_image, .pop_up_image span {
+	z-index: 100;
+	/*Puts it in front of the rest of the page / other elements */
 	top: 0;
 	/*Puts it near the top right corner, 10px from the right. Makes the image stay in the same place even when scrolling*/
 }
 .pop_up_image span {
-	/*Used to creat the close button X*/
-	position: absolute;
 	/*Makes it possible to position using top and right*/
 	right: 10px;
 	font-size: 40px;
 	font-weight: bolder;
 	/*Makes it bold for easier visibility*/
 	color: #FFFFFF;
+}
+.pop_up_image span, .card img{
 	cursor: pointer;
 	/*Makes the cursor a pointer to tell the user it can be clicked on*/
-	z-index: 100;
-	/*Puts it in front of the rest of the page*/
 }
 .pop_up_image img {
-	position: absolute;
-	/*Makes it so the image can be controlled using top and left*/
-	top: 50%;
 	/*Puts it top left corner at the center*/
-	left: 50%;
 	transform: translate(-50%, -50%);
 	/*moves it so the middle point is at the center*/
 	border: 5px solid #fff;
 	/* creates contrast against dark background */
-	border-radius: 5px;
-	/* rounded corners for modern feel */
 	width: 750px;
 	/* fixed size for desktop view */
-	object-fit: cover;
-	/* Ensures images fill container without distortion (important for different screen sizes) */
 }
 .card img {
-	width: 100%;
-	/* reduces image dominance inside card */
 	height: 230px;
-	object-fit: cover;
 	border-radius: 8px;
-	cursor: pointer;
+}
+.pop_up_image img, .card img{
+	object-fit: cover;
+	/* Ensures images fill container without distortion (important for different screen sizes) */
 }
 .card img:hover {
 	/*this will change the opacity of my card images*/
 	opacity: 50%;
 }
-* {
+*, .main_content {
 	box-sizing: border-box;
 	/* Ensures padding and borders are included in total width/height, prevents layout breaking on smaller screens */
 }
@@ -172,7 +173,6 @@ iframe {
 	/* this adds the "card" effect */
 	padding: 10px;
 	border-radius: 8px;
-	text-align: center;
 	background-color: #f1f1f1;
 }
 .nav-links, .float_right {
@@ -180,8 +180,6 @@ iframe {
 	/* pushes navigation links to the right side of navbar, helps separate branding (left) from navigation (right) */
 }
 small {
-	display: block;
-	/* forces small text onto its own line */
 	margin-top: 15px;
 	/* adds spacing above for readability */
 }
@@ -195,7 +193,6 @@ footer {
 	/* high contrast for accessibility */
 	font-family: "Inter", sans-serif;
 	/* This is imported from Google Fonts */
-	text-align: center;
 	/* centers all footer content */
 	margin-top: 0;
 	flex-grow: 1;
@@ -224,14 +221,11 @@ footer a {
 	display: inline-block;
 	/* allows padding & transforms */
 	text-decoration: none;
-	text-align: center;
 	font-size: 17px;
 	margin: 0 15px;
 	/* adds space left & right of each link */
 	padding: 8px 14px;
 	/* increases clickable area */
-	border-radius: 10px;
-	/* rounded corners for modern feel */
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 footer p {
@@ -270,7 +264,6 @@ footer a.active:hover {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 .topnav h1 {
-	margin: 0;
 	line-height: 60px;
 	/* vertically aligns with navbar height */
 	font-size: 32px;
@@ -290,7 +283,6 @@ footer a.active:hover {
 	float: left;
 	height: 60px;
 	/* matches navbar height */
-	margin: 0;
 	transition: transform 0.3s ease, filter 0.3s ease;
 }
 .nav_inner {
@@ -308,12 +300,10 @@ footer a.active:hover {
 }
 .topnav a {
 	float: left;
-	display: block;
 	height: 60px;
 	line-height: 60px;
 	/* vertical centering */
 	color: #f2f2f2;
-	text-align: center;
 	padding: 0 16px;
 	text-decoration: none;
 	font-size: 17px;
@@ -326,7 +316,6 @@ footer a.active:hover {
 }
 .topnav a::after {
 	content: "";
-	position: absolute;
 	left: 16px;
 	right: 16px;
 	bottom: 10px;
@@ -362,12 +351,11 @@ footer a.active:hover {
 	background-color: #d88935;
 	color: white;
 }
-.topnav .icon {
+.topnav .icon, .topnav a.icon::after, .pop_up_image {
 	display: none;
 	/* Hidden by default, only shown in mobile view via media query */
 }
 .topnav a.icon {
-	border-radius: 10px;
 	transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .topnav a.icon:hover {
@@ -376,10 +364,6 @@ footer a.active:hover {
 	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 	animation: pulseHamburger 1.2s infinite;
 	/* draws attention to menu */
-}
-.topnav a.icon::after {
-	display: none;
-	/* removes underline animation from icon */
 }
 @keyframes pulseHamburger {
 	0% {
@@ -394,18 +378,10 @@ footer a.active:hover {
 	}
 }
 html, body {
-	margin: 0;
 	padding: 0;
 	/* removes browser default spacing */
 }
 body {
-	background-size: cover;
-	/* fills screen */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	/* gives nice depth/parallax feel */
-	display: flex;
 	flex-direction: column;
 	/* enables sticky footer layout */
 	min-height: 100vh;
@@ -423,12 +399,14 @@ body {
 .contact_page {
 	background-image: url(images/muscle_man.jpg);
 }
+.main_content, .topnav h1, .contact_image img {
+	transition: all 0.3s ease;
+}
 .main_content {
 	width: 80%;
 	max-width: 1000px;
 	/* prevents overly wide content */
 	text-align: justify;
-	box-sizing: border-box;
 	overflow: hidden;
 	margin: 40px auto;
 	/* centers content */
@@ -438,7 +416,6 @@ body {
 	backdrop-filter: blur(6px);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 	border-radius: 8px;
-	transition: all 0.3s ease;
 }
 .main_content:hover {
 	transform: translateY(-3px);
@@ -459,7 +436,6 @@ h2{
 	margin: 35px 0;
 }
 h1 {
-	text-align: center;
 	margin: 40px 0;
 }
 p, li {
@@ -474,8 +450,7 @@ p, li {
 	}
 	.hero_text {
 		position: absolute;
-		top: 62%;
-		left: 50%;
+		inset: 62% auto auto 50%;
 		transform: translate(-50%, -50%);
 		width: 90%;
 	}
@@ -495,8 +470,6 @@ p, li {
 	.topnav h1 {
 		margin-left: 15px;
 		/* moves title slightly right for better mobile spacing */
-		transition: all 0.3s ease;
-		/* keeps movement smooth when layout changes */
 	}
 	.nav_inner>a:first-child {
 		display: inline-flex;
@@ -550,8 +523,6 @@ p, li {
 		/* prevents image overflowing container */
 		height: auto;
 		/* keeps image proportions correct */
-		transition: all 0.3s ease;
-		/* smooths hover or layout changes */
 	}
 	.contact_image img:hover {
 		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
@@ -616,10 +587,6 @@ p, li {
 		/* shows hamburger icon on smaller screens */
 		position: absolute;
 		/* places icon independently in navbar */
-		top: -10px;
-		/* adjusts vertical position */
-		right: 0;
-		/* places icon on the right */
 		float: none;
 		/* stops desktop float from affecting mobile layout */
 		margin-right: 0;
@@ -633,8 +600,10 @@ p, li {
 	.topnav.responsive a.icon {
 		position: absolute;
 		/* keeps hamburger fixed in top-right while menu is open */
-		right: 0px;
-		top: -10px;
+	}
+	.topnav a.icon, .topnav.responsive a.icon{
+		inset: -10px 0 auto auto;
+		/* places icon on the right, adjusts vertical position */
 	}
 	.topnav.responsive a {
 		float: none;
