@@ -133,6 +133,8 @@ iframe, .pop_up_image img {
 }
 .card img {
 	height: 230px;
+}
+.card img, .card, .main_content{
 	border-radius: 8px;
 }
 .pop_up_image img, .card img{
@@ -147,32 +149,33 @@ iframe, .pop_up_image img {
 	box-sizing: border-box;
 	/* Ensures padding and borders are included in total width/height, prevents layout breaking on smaller screens */
 }
-.column {
-	/* Float four columns side by side */
+.column, .topnav img, .topnav a, .nav_bar_title {
 	float: left;
-	/* creates horizontal layout */
+	/* Float four columns / title side by side */
+}
+.column {
 	width: 50%;
 	/* ensures 4 equal columns */
-	padding: 10px;
 }
 .row {
 	margin: 0 -5px;
 }
-/* Remove extra left and right margins, due to padding in columns */
-
 .row:after {
-	/* Clear floats after the columns */
-	content: "";
 	display: table;
 	clear: both;
 	/* prevents layout collapsing due to floats */
+}
+.row:after, .topnav a::after{
+	content: "";
+	/* Clear floats after the columns */
+}
+.card, .column{
+	padding: 10px;
 }
 .card {
 	/* Style the counter cards */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	/* this adds the "card" effect */
-	padding: 10px;
-	border-radius: 8px;
 	background-color: #f1f1f1;
 }
 .nav-links, .float_right {
@@ -183,17 +186,16 @@ small {
 	margin-top: 15px;
 	/* adds spacing above for readability */
 }
-footer {
-	background-color: #941a27;
-	/* strong brand colour for footer */
+footer, footer p{
 	font-size: 18px;
-	padding: 3%;
-	/* responsive spacing */
-	color: white;
-	/* high contrast for accessibility */
+}
+footer, .topnav a{
 	font-family: "Inter", sans-serif;
 	/* This is imported from Google Fonts */
-	/* centers all footer content */
+}
+footer {
+	padding: 3%;
+	/* responsive spacing */
 	margin-top: 0;
 	flex-grow: 1;
 	/* Tells the footer to stretch to the bottom of the screen */
@@ -205,69 +207,80 @@ footer img {
 	margin-top: 10px;
 	/* spacing from text above */
 }
-footer .left_anchor {
+footer .left_anchor, footer p {
 	/* Furthest left anchor has 10% margin left to line up with main content */
 	margin-left: 8%;
-	/* aligns with main content width visually */
 }
 footer .right {
 	/* Furthest right anchor has 10% margin left to line up */
 	margin-right: 8%;
-	/* keeps symmetry across layout */
 }
-footer a {
+footer a, .topnav a{
 	color: #f2f2f2;
 	/* readable light colour */
-	display: inline-block;
-	/* allows padding & transforms */
-	text-decoration: none;
 	font-size: 17px;
+	text-decoration: none;
+}
+footer a, .topnav h1 {
+	display: inline-block;
+}
+footer a {
 	margin: 0 15px;
 	/* adds space left & right of each link */
 	padding: 8px 14px;
 	/* increases clickable area */
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-footer p {
-	font-size: 18px;
-	margin-left: 8%;
-	/* aligns text with left anchor */
-}
-footer a:hover {
+footer a:hover, .topnav a.icon:hover{
 	background-color: rgba(255, 255, 255, 0.12);
-	/* subtle hover feedback */
-	color: #F7DCA1;
-	/* highlights interaction */
+}
+footer a:hover, .topnav a:hover{
 	transform: translateY(-2px);
 	/* gives lift effect */
+	color: #F7DCA1;
+	/* subtle hover feedback */
+}
+footer a:hover {
+	/* highlights interaction */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 footer a.active {
 	background-color: #C87620;
 	/* indicates current page */
-	color: white;
 }
 footer a.active:hover {
 	background-color: #d88935;
 	/* slightly lighter for hover feedback */
-	color: white;
 }
-.topnav {
+footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.active:hover {
+	color: white;
+	/* high contrast for accessibility */ 
+}
+.topnav, footer{
+	background-color: #941a27;
+	/* strong brand colour for footer */
+}
+.topnav, .topnav a{
 	position: relative;
+}
+.topnav, .main_content, .nav_inner, .topnav a {
 	overflow: hidden;
 	/* Prevents child elements from spilling outside navbar */
-	background-color: #941a27;
+}
+.topnav {
 	transition: box-shadow 0.35s ease, background-color 0.35s ease;
 	/* smooth visual feedback */
 }
 .topnav:hover {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
-.topnav h1 {
+.topnav h1, .topnav a{
 	line-height: 60px;
+	/* vertical centering */
+}
+.topnav h1 {
 	/* vertically aligns with navbar height */
 	font-size: 32px;
-	display: inline-block;
 	color: wheat;
 	margin-left: -10px;
 	transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
@@ -278,19 +291,20 @@ footer a.active:hover {
 	text-shadow: 0 0 10px rgba(200, 118, 32, 0.5);
 	/* glow effect */
 }
-.topnav img {
-	/*styling for the logo on the left of navbar*/
-	float: left;
+.topnav img, .topnav a{
 	height: 60px;
 	/* matches navbar height */
+}
+.topnav img {
+	/*styling for the logo on the left of navbar*/
 	transition: transform 0.3s ease, filter 0.3s ease;
 }
-.nav_inner {
+.nav_inner, .main_content{
 	width: 80%;
+}
+.nav_inner {
 	max-width: 1000px;
 	margin: 0 auto;
-	overflow: hidden;
-	/* keeps floats contained */
 }
 .topnav img:hover {
 	transform: scale(1.05);
@@ -299,23 +313,11 @@ footer a.active:hover {
 	/* makes logo pop slightly */
 }
 .topnav a {
-	float: left;
-	height: 60px;
-	line-height: 60px;
-	/* vertical centering */
-	color: #f2f2f2;
 	padding: 0 16px;
-	text-decoration: none;
-	font-size: 17px;
 	margin-right: 15px;
-	font-family: "Inter", sans-serif;
-	/* This is imported from Google Fonts */
-	position: relative;
-	overflow: hidden;
 	transition: color 0.3s ease, transform 0.25s ease, background-color 0.3s ease;
 }
 .topnav a::after {
-	content: "";
 	left: 16px;
 	right: 16px;
 	bottom: 10px;
@@ -329,10 +331,7 @@ footer a.active:hover {
 	/* smooth rounded underline */
 }
 .topnav a:hover {
-	color: #F7DCA1;
 	background-color: rgba(255, 255, 255, 0.08);
-	transform: translateY(-2px);
-	/* consistent hover lift */
 }
 .topnav a:hover::after {
 	transform: scaleX(1);
@@ -340,7 +339,6 @@ footer a.active:hover {
 }
 .topnav a.active {
 	background-color: #C87620;
-	color: white;
 }
 .topnav a.active::after {
 	background-color: white;
@@ -349,7 +347,6 @@ footer a.active:hover {
 }
 .topnav a.active:hover {
 	background-color: #d88935;
-	color: white;
 }
 .topnav .icon, .topnav a.icon::after, .pop_up_image {
 	display: none;
@@ -359,7 +356,6 @@ footer a.active:hover {
 	transition: transform 0.25s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .topnav a.icon:hover {
-	background-color: rgba(255, 255, 255, 0.12);
 	transform: scale(1.08);
 	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 	animation: pulseHamburger 1.2s infinite;
@@ -403,11 +399,9 @@ body {
 	transition: all 0.3s ease;
 }
 .main_content {
-	width: 80%;
 	max-width: 1000px;
 	/* prevents overly wide content */
 	text-align: justify;
-	overflow: hidden;
 	margin: 40px auto;
 	/* centers content */
 	padding: 30px;
@@ -415,7 +409,6 @@ body {
 	/* light contrast against dark body */
 	backdrop-filter: blur(6px);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-	border-radius: 8px;
 }
 .main_content:hover {
 	transform: translateY(-3px);
@@ -424,8 +417,6 @@ body {
 .nav_bar_title {
 	margin-left: 10px;
 	text-shadow: none;
-	float: left;
-	/* keeps title aligned left */
 }
 h1, h2, h3{
 	font-family: "Archivo Black";
