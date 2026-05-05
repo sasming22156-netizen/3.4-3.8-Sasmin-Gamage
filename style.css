@@ -60,6 +60,11 @@ iframe, .pop_up_image img {
 	border-radius: 5px;
 	/* softens edges for modern UI look */
 }
+iframe{
+	width: 80%;
+	max-width: 750px;
+	height: 500px;
+}
 .contact_intro, body{
 	display: flex;	
 	/* enables flexible layout */
@@ -187,7 +192,7 @@ small {
 	/* adds spacing above for readability */
 }
 footer, footer p{
-	font-size: 18px;
+	font-size: 15px;
 }
 footer, .topnav a{
 	font-family: "Inter", sans-serif;
@@ -200,12 +205,26 @@ footer {
 	flex-grow: 1;
 	/* Tells the footer to stretch to the bottom of the screen */
 }
+footer small{
+	margin-top: 8px;
+	color: rgba(255, 255, 255, 0.65);
+}
 footer img {
-	width: 32px;
+	width: 28px;
 	/* consistent icon sizing */
-	height: 32px;
-	margin-top: 10px;
+	height: 28px;
+	margin-top: 8px;
 	/* spacing from text above */
+	transition: transform 0.25s ease, filter 0.25s ease;
+}
+footer a:has(img):hover {
+	background-color: transparent;
+	box-shadow: none;
+	transform: none;
+}
+footer a:has(img):hover img {
+	transform: translateY(-3px) scale(1.12);
+	filter: brightness(1.25);
 }
 footer .left_anchor, footer p {
 	/* Furthest left anchor has 10% margin left to line up with main content */
@@ -225,9 +244,9 @@ footer a, .topnav h1 {
 	display: inline-block;
 }
 footer a {
-	margin: 0 15px;
+	margin: 0 8px;
 	/* adds space left & right of each link */
-	padding: 8px 14px;
+	padding: 6px 10px;
 	/* increases clickable area */
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -280,7 +299,7 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 }
 .topnav h1 {
 	/* vertically aligns with navbar height */
-	font-size: 32px;
+	font-size: 26px;
 	color: wheat;
 	margin-left: -10px;
 	transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
@@ -409,10 +428,29 @@ body {
 	/* light contrast against dark body */
 	backdrop-filter: blur(6px);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+	border: 4px solid #5A2E14; /* adds brown branding */
 }
 .main_content:hover {
 	transform: translateY(-3px);
 	/* subtle hover elevation */
+}
+.main_content a[href^="mailto"] {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 10px 16px;
+	border-radius: 999px;
+	background-color: #941a27;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+	transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.main_content a[href^="mailto"]:hover {
+	background-color: #C87620;
+	color: #fff;
+	transform: translateY(-2px);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
 }
 .nav_bar_title {
 	margin-left: 10px;
@@ -628,7 +666,7 @@ p, li {
 		font-size: 32px;
 	}
 	.topnav h1 {
-		font-size: 20px;
+		font-size: 18px;
 		/* reduces title size so it fits */
 		line-height: 50px;
 		/* keeps title vertically aligned */
