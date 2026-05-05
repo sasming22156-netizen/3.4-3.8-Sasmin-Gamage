@@ -434,7 +434,7 @@ body {
 	transform: translateY(-3px);
 	/* subtle hover elevation */
 }
-.main_content a[href^="mailto"] {
+.main_content a[href^="mailto"] { 
 	display: inline-block;
 	margin-top: 12px;
 	padding: 10px 16px;
@@ -446,7 +446,7 @@ body {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 	transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-.main_content a[href^="mailto"]:hover {
+.main_content a[href^="mailto"]:hover { /* reference to "https://prismic.io/blog/css-hover-effects" */
 	background-color: #C87620;
 	color: #fff;
 	transform: translateY(-2px);
