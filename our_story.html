@@ -82,17 +82,6 @@
 	 <img src="images/fast_athlete.jpg" alt="Athlete sprinting"></div>
 	<div class="pop_up_image"><span>&times;</span> <!-- Close button -->
 	 <img src="images/fight_bison.jpg" alt="Bison charging"></div>
-	<script>
-	/* Javascript and the code for the modal */
-	   document.querySelectorAll('.card img').forEach(image =>{
-	       image.onclick = () =>{
-	           document.querySelector('.pop_up_image').style.display = 'block';
-	           document.querySelector('.pop_up_image img').src = image.getAttribute('src');
-	       }
-	   })               
-	   document.querySelector('.pop_up_image span').onclick = () =>{
-	   document.querySelector('.pop_up_image').style.display = 'none';
-	   }
-	</script>
+	<script src="image_modal.js"></script>
 </body>
 </html>
