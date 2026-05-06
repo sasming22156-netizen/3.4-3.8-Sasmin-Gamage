@@ -7,7 +7,6 @@
 .parallax {
 	/* The image used */
 	background-image: url("images/good_ad.png");
-
 	/* Set a specific height */
 	min-height: 500px; 
 }
@@ -22,16 +21,13 @@
 	transform: translate(-50%, -50%); /* perfect center */
 	width: 90%; /* stops overflow on mobile */
 }
-
 .hero_text, .card, footer, footer a, .topnav a, h1{
 	text-align: center;
 }
-
 .hero_text h1, .topnav h1, .topnav img, html, body{
 	margin: 0;
 	/* matches navbar height */
 }
-
 .hero_text h1 {
 	color: #93C193;
 	font-size: 60px;
@@ -197,7 +193,6 @@ footer, .topnav a{
 footer {
 	padding: 3%;
 	/* responsive spacing */
-	margin-top: 0;
 	flex-grow: 1;
 	/* Tells the footer to stretch to the bottom of the screen */
 }
@@ -314,11 +309,14 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	/*styling for the logo on the left of navbar*/
 	transition: transform 0.3s ease, filter 0.3s ease;
 }
-.nav_inner, .main_content{
+.nav_inner, .main_content {
 	width: 80%;
 }
-.nav_inner {
+.nav_inner, .main_content {
 	max-width: 1000px;
+	/* prevents overly wide content */
+}
+.nav_inner {
 	margin: 0 auto;
 }
 .topnav img:hover {
@@ -333,7 +331,7 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	transition: color 0.3s ease, transform 0.25s ease, background-color 0.3s ease;
 }
 .topnav a::after {
-	inset: auto 16px 10px 16px;
+	inset: auto 16px 10px;
 	height: 3px;
 	background-color: #F7DCA1;
 	transform: scaleX(0);
@@ -414,8 +412,6 @@ body {
 	transition: all 0.3s ease;
 }
 .main_content {
-	max-width: 1000px;
-	/* prevents overly wide content */
 	text-align: justify;
 	margin: 40px auto;
 	/* centers content */
@@ -461,7 +457,7 @@ h1 {
 	margin: 40px 0;
 }
 p, li {
-	font: 300 16px Inter;
+	font: 300 16px/1.5 Inter, sans-serif;
 	color: #2b0910;
 	/* readable dark text */
 }
@@ -626,8 +622,6 @@ p, li {
 	.main_content {
 		width: 95%;
 		/* gives content more space on small screens */
-		transition: all 0.3s ease;
-		/* smooths resizing changes */
 	}
 }
 @media screen and (max-width: 650px) {
