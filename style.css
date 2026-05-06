@@ -24,7 +24,7 @@
 .hero_text, .card, footer, footer a, .topnav a, h1{
 	text-align: center;
 }
-.hero_text h1, .topnav h1, .topnav img, html, body{
+.hero_text h1, .topnav h1, .topnav img, html, body {
 	margin: 0;
 	/* matches navbar height */
 }
@@ -186,10 +186,6 @@ small {
 footer, footer p{
 	font-size: 15px;
 }
-footer, .topnav a{
-	font-family: "Inter", sans-serif;
-	/* This is imported from Google Fonts */
-}
 footer {
 	padding: 3%;
 	/* responsive spacing */
@@ -254,11 +250,11 @@ footer a:hover {
 	/* highlights interaction */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-footer a.active {
+footer a.active, .topnav a.active, .main_content a[href^="mailto"]:hover {
 	background-color: #C87620;
 	/* indicates current page */
 }
-footer a.active:hover {
+footer a.active:hover, .topnav a.active:hover {
 	background-color: #d88935;
 	/* slightly lighter for hover feedback */
 }
@@ -311,8 +307,6 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 }
 .nav_inner, .main_content {
 	width: 80%;
-}
-.nav_inner, .main_content {
 	max-width: 1000px;
 	/* prevents overly wide content */
 }
@@ -350,16 +344,10 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	transform: scaleX(1);
 	/* Smooth hover animation improves user experience and visual feedback */
 }
-.topnav a.active {
-	background-color: #C87620;
-}
 .topnav a.active::after {
 	background-color: white;
 	transform: scaleX(1);
 	/* keeps underline visible on active page */
-}
-.topnav a.active:hover {
-	background-color: #d88935;
 }
 .topnav .icon, .topnav a.icon::after, .pop_up_image {
 	display: none;
@@ -375,20 +363,21 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	/* draws attention to menu */
 }
 @keyframes pulseHamburger {
-	0% {
+	0%, 100% {
 		transform: scale(1);
 	}
 	50% {
 		transform: scale(1.1);
 		/* grows slightly */
 	}
-	100% {
-		transform: scale(1);
-	}
 }
 html, body {
 	padding: 0;
 	/* removes browser default spacing */
+}
+html{
+	font-family: "Inter", sans-serif;
+	/* This is imported from Google Fonts */
 }
 body {
 	flex-direction: column;
@@ -436,7 +425,6 @@ body {
 	transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .main_content a[href^="mailto"]:hover { /* reference to "https://prismic.io/blog/css-hover-effects" */
-	background-color: #C87620;
 	color: #fff;
 	transform: translateY(-2px);
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
@@ -457,7 +445,7 @@ h1 {
 	margin: 40px 0;
 }
 p, li {
-	font: 300 16px/1.5 Inter, sans-serif;
+	font: 300 16px Inter, sans-serif;
 	color: #2b0910;
 	/* readable dark text */
 }
@@ -466,7 +454,7 @@ p, li {
 		position: relative;
 		min-height: 500px;
 	}
-	.hero_text, .topnav a.icon, .topnav.responsive a.icon {
+	.topnav a.icon, .topnav.responsive a.icon {
 		position: absolute;
 		/* places icon independently in navbar, keeps hamburger fixed in top-right while menu is open */
 	}
@@ -479,7 +467,7 @@ p, li {
 		font-size: clamp(32px, 11vw, 46px);
 		line-height: 1.05;
 	}
-	.hero_text h1, .nav_inner>a:first-child, .topnav.responsive .nav-links a{
+	.nav_inner>a:first-child, .topnav.responsive .nav-links a{
 		margin: 0;
 		/* removes default spacing */
 	}
@@ -489,7 +477,6 @@ p, li {
 		/* matches mobile .main_content */
 		max-width: 1000px;
 		margin: 0 auto;
-		overflow: hidden;
 	}
 	.topnav h1 {
 		margin-left: 15px;
@@ -539,10 +526,10 @@ p, li {
 		/* allows image area to fill screen width */
 	}
 	.contact_image img {
-		width: 100%;
-		/* makes image responsive */
 		max-width: 100%;
 		/* prevents image overflowing container */
+	}
+	.nav_inner>a:first-child, .contact_image img {
 		height: auto;
 		/* keeps image proportions correct */
 	}
@@ -554,19 +541,11 @@ p, li {
 		width: 80%;
 		/* makes gallery pop-up image fit smaller screens */
 	}
-	.card img {
-		width: 100%;
-		/* makes card images fill the card on mobile */
-	}
 	.column {
 		width: 100%;
 		/* changes columns into full-width rows */
 		margin-bottom: 20px;
 		/* adds spacing between stacked cards */
-	}
-	.column, .topnav.responsive .nav-links, .topnav.responsive .nav-links a, .topnav a.icon, .topnav.responsive a{
-		display: block;
-		/* stacks each column vertically on mobile phone, JavaScript toggles this class to show/hide menu on small screens */
 	}
 	.nav-links {
 		overflow: visible;
@@ -585,7 +564,6 @@ p, li {
 	}
 	.topnav.responsive .nav-links a {
 		width: 100%;
-		height: auto;
 		line-height: 1.4;
 		padding: 16px 20px;
 		text-align: left;
@@ -595,13 +573,15 @@ p, li {
 	}
 	/* Hides navigation links on small screens to reduce clutter */
 	.topnav a.icon {
-		display: block;
-		/* shows hamburger icon on smaller screens */
 		float: none;
 		/* stops desktop float from affecting mobile layout */
 		margin-right: 0;
 		padding: 12px 14px;
 		/* creates a comfortable clickable area */
+	}
+	.topnav a.icon, .column, .topnav.responsive .nav-links, .topnav.responsive a {
+		display: block;
+		/* stacks each column vertically on mobile phone, JavaScript toggles this class to show/hide menu on small screens */
 	}
 	.topnav.responsive {
 		position: relative;
@@ -647,7 +627,5 @@ p, li {
 		/* keeps title vertically aligned */
 		margin-top: 3px;
 		/* fine-tunes vertical spacing */
-		transition: all 0.3s ease;
-		/* keeps title movement smooth */
 	}
 }
