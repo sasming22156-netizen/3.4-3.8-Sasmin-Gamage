@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&display=swap');
 /* Imports custom fonts for typography consistency and branding */
-.parallax, body{
-	/* fills screen, create the parallax scrolling effect */ 
+
+.parallax, body {
+	/* fills screen, create the parallax scrolling effect */
 	background: center / cover no-repeat fixed;
 }
 .parallax {
 	/* The image used */
 	background-image: url("images/good_ad.png");
 	/* Set a specific height */
-	min-height: 500px; 
+	min-height: 500px;
 }
 .hero_text, .pop_up_image span, .pop_up_image img, .topnav a::after {
 	position: absolute;
@@ -18,10 +19,12 @@
 	/*Makes it so the image can be controlled using top and left*/
 }
 .hero_text {
-	transform: translate(-50%, -50%); /* perfect center */
-	width: 90%; /* stops overflow on mobile */
+	transform: translate(-50%, -50%);
+	/* perfect center */
+	width: 90%;
+	/* stops overflow on mobile */
 }
-.hero_text, .card, footer, footer a, .topnav a, h1{
+.hero_text, .card, footer, footer a, .topnav a, h1 {
 	text-align: center;
 }
 .hero_text h1, .topnav h1, .topnav img, html, body {
@@ -52,13 +55,13 @@ iframe, .pop_up_image img {
 	border-radius: 5px;
 	/* softens edges for modern UI look */
 }
-iframe{
+iframe {
 	width: 80%;
 	max-width: 750px;
 	height: 500px;
 }
-.contact_intro, body{
-	display: flex;	
+.contact_intro, body {
+	display: flex;
 	/* enables flexible layout */
 }
 .contact_intro {
@@ -115,7 +118,7 @@ iframe{
 	/*Makes it bold for easier visibility*/
 	color: #FFFFFF;
 }
-.pop_up_image span, .card img{
+.pop_up_image span, .card img {
 	cursor: pointer;
 	/*Makes the cursor a pointer to tell the user it can be clicked on*/
 }
@@ -131,10 +134,10 @@ iframe{
 .card img {
 	height: 230px;
 }
-.card img, .card, .main_content{
+.card img, .card, .main_content {
 	border-radius: 8px;
 }
-.pop_up_image img, .card img{
+.pop_up_image img, .card img {
 	object-fit: cover;
 	/* Ensures images fill container without distortion (important for different screen sizes) */
 }
@@ -162,11 +165,11 @@ iframe{
 	clear: both;
 	/* prevents layout collapsing due to floats */
 }
-.row:after, .topnav a::after{
+.row:after, .topnav a::after {
 	content: "";
 	/* Clear floats after the columns */
 }
-.card, .column{
+.card, .column {
 	padding: 10px;
 }
 .card {
@@ -183,7 +186,7 @@ small {
 	margin-top: 15px;
 	/* adds spacing above for readability */
 }
-footer, footer p{
+footer, footer p {
 	font-size: 15px;
 }
 footer {
@@ -192,7 +195,7 @@ footer {
 	flex-grow: 1;
 	/* Tells the footer to stretch to the bottom of the screen */
 }
-footer small{
+footer small {
 	margin-top: 8px;
 	color: rgba(255, 255, 255, 0.65);
 }
@@ -221,7 +224,7 @@ footer .right {
 	/* Furthest right anchor has 10% margin left to line up */
 	margin-right: 8%;
 }
-footer a, .topnav a{
+footer a, .topnav a {
 	color: #f2f2f2;
 	/* readable light colour */
 	font-size: 17px;
@@ -237,10 +240,10 @@ footer a {
 	/* increases clickable area */
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-footer a:hover, .topnav a.icon:hover{
+footer a:hover, .topnav a.icon:hover {
 	background-color: rgba(255, 255, 255, 0.12);
 }
-footer a:hover, .topnav a:hover{
+footer a:hover, .topnav a:hover {
 	transform: translateY(-2px);
 	/* gives lift effect */
 	color: #F7DCA1;
@@ -260,13 +263,13 @@ footer a.active:hover, .topnav a.active:hover {
 }
 footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.active:hover {
 	color: white;
-	/* high contrast for accessibility */ 
+	/* high contrast for accessibility */
 }
 .topnav, footer, .main_content a[href^="mailto"] {
 	background-color: #941a27;
 	/* strong brand colour for footer */
 }
-.topnav, .topnav a{
+.topnav, .topnav a {
 	position: relative;
 }
 .topnav, .main_content, .nav_inner, .topnav a {
@@ -280,7 +283,7 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 .topnav:hover {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
-.topnav h1, .topnav a{
+.topnav h1, .topnav a {
 	line-height: 60px;
 	/* vertical centering */
 }
@@ -297,7 +300,7 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	text-shadow: 0 0 10px rgba(200, 118, 32, 0.5);
 	/* glow effect */
 }
-.topnav img, .topnav a{
+.topnav img, .topnav a {
 	height: 60px;
 	/* matches navbar height */
 }
@@ -333,7 +336,7 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	transform-origin: center;
 	transition: transform 0.3s ease;
 }
-.topnav a::after, .main_content a[href^="mailto"]{
+.topnav a::after, .main_content a[href^="mailto"] {
 	border-radius: 999px;
 	/* smooth rounded underline */
 }
@@ -375,7 +378,7 @@ html, body {
 	padding: 0;
 	/* removes browser default spacing */
 }
-html{
+html {
 	font-family: "Inter", sans-serif;
 	/* This is imported from Google Fonts */
 }
@@ -409,13 +412,14 @@ body {
 	/* light contrast against dark body */
 	backdrop-filter: blur(6px);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-	border: 4px solid #5A2E14; /* adds brown branding */
+	border: 4px solid #5A2E14;
+	/* adds brown branding */
 }
 .main_content:hover {
 	transform: translateY(-3px);
 	/* subtle hover elevation */
 }
-.main_content a[href^="mailto"] { 
+.main_content a[href^="mailto"] {
 	margin-top: 12px;
 	padding: 10px 16px;
 	color: #fff;
@@ -424,7 +428,8 @@ body {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 	transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-.main_content a[href^="mailto"]:hover { /* reference to "https://prismic.io/blog/css-hover-effects" */
+.main_content a[href^="mailto"]:hover {
+	/* reference to "https://prismic.io/blog/css-hover-effects" */
 	color: #fff;
 	transform: translateY(-2px);
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
@@ -433,12 +438,12 @@ body {
 	margin-left: 10px;
 	text-shadow: none;
 }
-h1, h2, h3{
+h1, h2, h3 {
 	font-family: "Archivo Black";
 	color: #5E121F;
 	text-shadow: 0 0 5px #C87620;
 }
-h2{
+h2 {
 	margin: 35px 0;
 }
 h1 {
@@ -467,7 +472,7 @@ p, li {
 		font-size: clamp(32px, 11vw, 46px);
 		line-height: 1.05;
 	}
-	.nav_inner>a:first-child, .topnav.responsive .nav-links a{
+	.nav_inner>a:first-child, .topnav.responsive .nav-links a {
 		margin: 0;
 		/* removes default spacing */
 	}
@@ -587,7 +592,7 @@ p, li {
 		position: relative;
 	}
 	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-	.topnav a.icon, .topnav.responsive a.icon{
+	.topnav a.icon, .topnav.responsive a.icon {
 		inset: -10px 0 auto auto;
 		/* places icon on the right, adjusts vertical position */
 	}
