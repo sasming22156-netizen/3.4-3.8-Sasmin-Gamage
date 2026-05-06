@@ -19,10 +19,8 @@
 	/*Makes it so the image can be controlled using top and left*/
 }
 .hero_text {
-	width: 90%; /* stops overflow on mobile */
-}
-.hero_text, .pop_up_image img {
 	transform: translate(-50%, -50%); /* perfect center */
+	width: 90%; /* stops overflow on mobile */
 }
 
 .hero_text, .card, footer, footer a, .topnav a, h1{
@@ -59,6 +57,7 @@ iframe, .pop_up_image img {
 	/* softens edges for modern UI look */
 }
 iframe{
+	width: 80%;
 	max-width: 750px;
 	height: 500px;
 }
@@ -85,6 +84,7 @@ iframe{
 	/* scales image within container */
 }
 .contact_image img {
+	/* Keeps image responsive while maintaining aspect ratio */
 	max-width: 300px;
 	/* prevents oversized images */
 	height: auto;
@@ -124,6 +124,9 @@ iframe{
 	/*Makes the cursor a pointer to tell the user it can be clicked on*/
 }
 .pop_up_image img {
+	/*Puts it top left corner at the center*/
+	transform: translate(-50%, -50%);
+	/*moves it so the middle point is at the center*/
 	border: 5px solid #fff;
 	/* creates contrast against dark background */
 	width: 750px;
@@ -198,17 +201,16 @@ footer {
 	flex-grow: 1;
 	/* Tells the footer to stretch to the bottom of the screen */
 }
-footer small, footer img{
-	margin-top: 8px;
-	/* spacing from text above */
-}
 footer small{
+	margin-top: 8px;
 	color: rgba(255, 255, 255, 0.65);
 }
 footer img {
 	width: 28px;
 	/* consistent icon sizing */
 	height: 28px;
+	margin-top: 8px;
+	/* spacing from text above */
 	transition: transform 0.25s ease, filter 0.25s ease;
 }
 footer a:has(img):hover {
@@ -232,8 +234,6 @@ footer a, .topnav a{
 	color: #f2f2f2;
 	/* readable light colour */
 	font-size: 17px;
-}
-footer a, .topnav a, .main_content a[href^="mailto"] {
 	text-decoration: none;
 }
 footer a, .topnav h1, .main_content a[href^="mailto"] {
@@ -249,11 +249,9 @@ footer a {
 footer a:hover, .topnav a.icon:hover{
 	background-color: rgba(255, 255, 255, 0.12);
 }
-footer a:hover, .topnav a:hover, .main_content a[href^="mailto"]:hover {
+footer a:hover, .topnav a:hover{
 	transform: translateY(-2px);
 	/* gives lift effect */
-}
-footer a:hover, .topnav a:hover{
 	color: #F7DCA1;
 	/* subtle hover feedback */
 }
@@ -261,11 +259,11 @@ footer a:hover {
 	/* highlights interaction */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-footer a.active, .topnav a.active, .main_content a[href^="mailto"]:hover {
+footer a.active {
 	background-color: #C87620;
 	/* indicates current page */
 }
-footer a.active:hover, .topnav a.active:hover {
+footer a.active:hover {
 	background-color: #d88935;
 	/* slightly lighter for hover feedback */
 }
@@ -316,13 +314,11 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	/*styling for the logo on the left of navbar*/
 	transition: transform 0.3s ease, filter 0.3s ease;
 }
-.nav_inner, .main_content, iframe{
+.nav_inner, .main_content{
 	width: 80%;
 }
-.nav_inner, .main_content {
-	max-width: 1000px;
-}
 .nav_inner {
+	max-width: 1000px;
 	margin: 0 auto;
 }
 .topnav img:hover {
@@ -352,12 +348,20 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 .topnav a:hover {
 	background-color: rgba(255, 255, 255, 0.08);
 }
-.topnav a:hover::after, .topnav a.active::after {
+.topnav a:hover::after {
 	transform: scaleX(1);
-	/* Smooth hover animation improves user experience and visual feedback,  keeps underline visible on active page  */
+	/* Smooth hover animation improves user experience and visual feedback */
+}
+.topnav a.active {
+	background-color: #C87620;
 }
 .topnav a.active::after {
 	background-color: white;
+	transform: scaleX(1);
+	/* keeps underline visible on active page */
+}
+.topnav a.active:hover {
+	background-color: #d88935;
 }
 .topnav .icon, .topnav a.icon::after, .pop_up_image {
 	display: none;
@@ -373,12 +377,15 @@ footer a.active, footer a.active:hover, footer, .topnav a.active, .topnav a.acti
 	/* draws attention to menu */
 }
 @keyframes pulseHamburger {
-	0%, 100% {
+	0% {
 		transform: scale(1);
 	}
 	50% {
 		transform: scale(1.1);
 		/* grows slightly */
+	}
+	100% {
+		transform: scale(1);
 	}
 }
 html, body {
@@ -407,6 +414,8 @@ body {
 	transition: all 0.3s ease;
 }
 .main_content {
+	max-width: 1000px;
+	/* prevents overly wide content */
 	text-align: justify;
 	margin: 40px auto;
 	/* centers content */
@@ -421,17 +430,19 @@ body {
 	transform: translateY(-3px);
 	/* subtle hover elevation */
 }
-.main_content a[href^="mailto"], .main_content a[href^="mailto"]:hover{
-	color: #fff;
-}
 .main_content a[href^="mailto"] { 
 	margin-top: 12px;
 	padding: 10px 16px;
+	color: #fff;
 	font-weight: 600;
+	text-decoration: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 	transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .main_content a[href^="mailto"]:hover { /* reference to "https://prismic.io/blog/css-hover-effects" */
+	background-color: #C87620;
+	color: #fff;
+	transform: translateY(-2px);
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
 }
 .nav_bar_title {
@@ -456,6 +467,7 @@ p, li {
 }
 @media screen and (max-width:1050px) {
 	.parallax {
+		position: relative;
 		min-height: 500px;
 	}
 	.hero_text, .topnav a.icon, .topnav.responsive a.icon {
@@ -476,16 +488,14 @@ p, li {
 		/* removes default spacing */
 	}
 	/* Applies these layout changes on tablets and smaller screens */
-	.nav_inner, .main_content{
-		width: 95%;
-		/* gives content more space on small screens, matches mobile .main_content */
-	}
 	.nav_inner {
+		width: 95%;
+		/* matches mobile .main_content */
 		max-width: 1000px;
 		margin: 0 auto;
 		overflow: hidden;
 	}
-	.topnav h1, .topnav.responsive .nav_bar_title {
+	.topnav h1 {
 		margin-left: 15px;
 		/* moves title slightly right for better mobile spacing */
 	}
@@ -494,6 +504,8 @@ p, li {
 		/* keeps logo/link neatly aligned */
 		align-items: center;
 		/* vertically centers logo */
+		height: auto;
+		/* allows height to adjust naturally */
 		line-height: normal;
 		/* prevents forced navbar line-height issues */
 		padding: 0;
@@ -501,13 +513,13 @@ p, li {
 		width: fit-content;
 		/* makes clickable area only as wide as the content */
 	}
-	.nav_inner>a:first-child, .contact_image img, .topnav.responsive .nav-links a {
-		height: auto;
-		/* allows height to adjust naturally */
-	}
 	.topnav.responsive h1:first-of-type {
 		margin-bottom: 0;
 		/* helps keep title positioned correctly when menu opens */
+	}
+	.topnav.responsive .nav_bar_title {
+		margin-left: 15px;
+		/* keeps title aligned with mobile menu spacing */
 	}
 	.contact_intro {
 		display: flex;
@@ -527,14 +539,16 @@ p, li {
 	.contact_image {
 		order: 2;
 		/* image second, places image under heading for mobile readability */
-	}
-	.contact_image, .contact_image img, .card img, .column, .topnav.responsive .nav-links, .topnav.responsive .nav-links a{
 		width: 100%;
-		/* makes image responsive, allows image / card / column area to fill screen width */
+		/* allows image area to fill screen width */
 	}
 	.contact_image img {
+		width: 100%;
+		/* makes image responsive */
 		max-width: 100%;
 		/* prevents image overflowing container */
+		height: auto;
+		/* keeps image proportions correct */
 	}
 	.contact_text p {
 		order: 3;
@@ -544,43 +558,56 @@ p, li {
 		width: 80%;
 		/* makes gallery pop-up image fit smaller screens */
 	}
+	.card img {
+		width: 100%;
+		/* makes card images fill the card on mobile */
+	}
 	.column {
+		width: 100%;
+		/* changes columns into full-width rows */
 		margin-bottom: 20px;
 		/* adds spacing between stacked cards */
 	}
 	.column, .topnav.responsive .nav-links, .topnav.responsive .nav-links a, .topnav a.icon, .topnav.responsive a{
 		display: block;
-		/* stacks each column vertically on mobile phone and shows hamburger icon on smaller screens. JavaScript toggles this class to show/hide menu on small screens. */
+		/* stacks each column vertically on mobile phone, JavaScript toggles this class to show/hide menu on small screens */
 	}
-	.nav-links, .topnav {
+	.nav-links {
+		overflow: visible;
+		display: none;
+		/* adds spacing between stacked cards */
+	}
+	.topnav {
 		overflow: visible;
 	}
 	.topnav.responsive .nav-links {
+		width: 100%;
+		/* makes opened menu use full width */
 		margin-top: 20px;
 		/* pushes menu BELOW navbar */
 		clear: both;
 	}
 	.topnav.responsive .nav-links a {
+		width: 100%;
+		height: auto;
 		line-height: 1.4;
 		padding: 16px 20px;
-	}
-	.topnav.responsive .nav-links a, .topnav.responsive a {
 		text-align: left;
-		/* aligns mobile menu links to the left */
 	}
-	.topnav a:not(:first-child), .nav-links {
+	.topnav a:not(:first-child) {
 		display: none;
-		/* adds spacing between stacked cards */
 	}
 	/* Hides navigation links on small screens to reduce clutter */
 	.topnav a.icon {
+		display: block;
+		/* shows hamburger icon on smaller screens */
 		float: none;
 		/* stops desktop float from affecting mobile layout */
 		margin-right: 0;
 		padding: 12px 14px;
 		/* creates a comfortable clickable area */
 	}
-	.topnav.responsive, .parallax {
+	.topnav.responsive {
 		position: relative;
 	}
 	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -591,8 +618,14 @@ p, li {
 	.topnav.responsive a {
 		float: none;
 		/* removes desktop horizontal layout */
+		display: block;
+		/* stacks links vertically */
+		text-align: left;
+		/* aligns mobile menu links to the left */
 	}
 	.main_content {
+		width: 95%;
+		/* gives content more space on small screens */
 		transition: all 0.3s ease;
 		/* smooths resizing changes */
 	}
